@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Олег Новицкий](https://up.htmlacademy.ru/adaptive/14/user/480757).
-* Наставник: `Неизвестно`.
+* Наставник: [Bohdan Efimenko](https://htmlacademy.ru/profile/id496059).
 
 ---
 
