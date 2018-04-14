@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-icon" src="http://placehold.it/33x38" width="33" height="38" alt="Иконка логотипа Cat Energy">
+        <img class="page-header__logo-image" src="http://placehold.it/101x18" width="101" height="18" alt="Логотип магазина Cat Energy">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__button" type="button">Открыть меню</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">
+            <a class="main-nav__list-item-link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a class="main-nav__list-item-link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--active">
+            <a class="main-nav__list-item-link">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="inner-page-main">
+      <h1 class="inner-page-main__heading">Подбор программы</h1>
+      <section class="questionnaire">
+        <h2 class="questionnaire__heading">Заполните анкету и мы подберем программу питания для вашего кота</h2>
+        <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="questionnaire__about-cat">
+            <p class="about-cat__item-wrapper">
+              <label class="about-cat__name-label" for="name-field">Имя:<sup>*</sup></label>
+              <input class="about-cat__name-field field" id="name-field" type="text" name="name" value="" placeholder="Барсик">
+            </p>
+            <p class="about-cat__item-wrapper">
+              <label class="about-cat__weight-label" for="weight-field">Вес (кг):<sup>*</sup></label>
+              <input class="about-cat__weight-field field" id="weight-field" type="text" name="weight" value="" placeholder="7">
+            </p>
+            <p class="about-cat__item-wrapper">
+              <label class="about-cat__age-label" for="age-field">Возраст (лет):</label>
+              <input class="about-cat__age-field field" id="age-field" type="text" name="age" value="" placeholder="7">
+            </p>
+          </fieldset>
+          <fieldset class="questionnaire__program-options">
+            <p class="program-option__item-wrapper">
+              <label class="program-option__weight-loss-label radio-indicator" for="weight-loss">Похудение</label>
+              <input class="program-option__weight-loss visually-hidden" id="weight-loss" type="radio" name="program-option" value="weight-loss" checked>
+            </p>
+            <p class="program-option__item-wrapper">
+              <label class="program-option__set-of-weight-label radio-indicator" for="set-of-weight">Набор массы</label>
+              <input class="program-option__set-of-weight visually-hidden" id="set-of-weight" type="radio" name="program-option" value="set-of-weight">
+            </p>
+            <p class="program-option__item-wrapper">
+              <label class="program-option__advice-label radio-indicator" for="advice">Не знаю (нужен ваш совет)</label>
+              <input class="program-option__advice visually-hidden" id="advice" type="radio" name="program-option" value="advice">
+            </p>
+          </fieldset>
+          <fieldset class="questionnaire__contacts">
+            <legend class="questionnaire__item-heading">Контактные данные (владельца кота)</legend>
+            <p class="contacts__item-wrapper">
+              <label class="contacts__email-label" for="email-field">E-mail:<sup>*</sup></label>
+              <input class="contacts__email-field" id="email-field" type="email" name="email" value="" placeholder="kuklachev@gmail.com">
+            </p>
+            <p class="contacts__item-wrapper">
+              <label class="contacts__phone-label" for="phone-field">Телефон:<sup>*</sup></label>
+              <input class="contacts__phone-field" id="phone-field" type="text" name="phone" value="" placeholder="8(960)900-60-90">
+            </p>
+          </fieldset>
+          <fieldset class="questionnaire__comment">
+            <legend class="questionnaire__item-heading">Комментарий</legend>
+            <p class="comment__wrapper">
+              <label class="visually-hidden" for="comment-field">Поле для комментария</label>
+              <textarea class="comment__text" id="comment-field" name="comment" rows="8" cols="80" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </p>
+          </fieldset>
+          <fieldset class="questionnaire__additional">
+            <legend class="questionnaire__item-heading">Дополнительно</legend>
+            <p class="additional__item-wrapper">
+              <label class="additional__sweetener-label" for="sweetener">Сахарозаменитель</label>
+              <input class="additional__sweetener" id="sweetener" type="checkbox" name="sweetener" value="yes" checked>
+            </p>
+            <p class="additional__item-wrapper">
+              <label class="additional__water-label" for="water">Питьевая вода</label>
+              <input class="additional__water" id="water" type="checkbox" name="water" value="yes">
+            </p>
+            <p class="additional__item-wrapper">
+              <label class="additional__milk-label" for="milk">Молоко</label>
+              <input class="additional__milk" id="milk" type="checkbox" name="milk" value="yes">
+            </p>
+            <p class="additional__item-wrapper">
+              <label class="additional__vitamins-label" for="vitamins">Витамины</label>
+              <input class="additional__vitamins" id="vitamins" type="checkbox" name="vitamins" value="yes">
+            </p>
+          </fieldset>
+          <button class="questionnaire__button button" type="submit">Отправить заявку</button>
+          <small class="questionnaire__specification"><sup>*</sup> - Обязательные поля</small>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="for-dealers">
+        <h3 class="for-dealers__heading">Приглашаем к сотрудничеству дилеров!</h3>
+        <p class="for-dealers__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </section>
+      <section class="map">
+        <h2 class="visually-hidden">Как нас найти</h2>
+        <img class="map__image" src="http://placehold.it/320x362" width="320" height="362" alt="Наш адрес: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      </section>
+      <a class="page-footer__logo" href="#">
+        <img class="page-footer__logo-image" src="http://placehold.it/128x24" width="128" height="24" alt="Логотип магазина Cat Energy">
+      </a>
+      <ul class="page-footer__socials-list">
+        <li class="socials-list__item">
+          <a class="socials-list__link socials-list__link--vkontakte" href="#">Вконтакте</a>
+        </li>
+        <li class="socials-list__item">
+          <a class="socials-list__link socials-list__link--instagram" href="#">Инстаграм</a>
+        </li>
+        <li class="socials-list__item">
+          <a class="socials-list__link socials-list__link--facebook" href="#">Фейсбук</a>
+        </li>
+      </ul>
+      <p class="page-footer__copyrights">
+        <a class="page-footer__copyrights-link" href="https://up.htmlacademy.ru/adaptive/14">HTML Academy</a>
+        <img class="page-footer__copyrights-logo" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+      </p>
+    </footer>
+  </body>
+</html>
