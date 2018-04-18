@@ -23,10 +23,14 @@
 
   vertical-align: top;
   color: inherit;
-  &:hover {
+  &:hover:not(&--active) {
     color: @text-black-hover;
+
+    cursor: pointer;
   }
-  &:active {
+  &:active:not(&--active) {
     color: @text-black-down;
   }
+
+  cursor: default;
 }
