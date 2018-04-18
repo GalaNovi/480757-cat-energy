@@ -1,0 +1,31 @@
+.nav-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-list__item {
+  box-sizing: border-box;
+
+  &:nth-child(n+2) {
+    margin-top: -1px;
+  }
+  text-align: center;
+
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.nav-list__link {
+  display: inline-block;
+  padding: 23px 0 22px;
+
+  color: inherit;
+  &:hover {
+    color: @text-black-hover;
+  }
+  &:active {
+    color: @text-black-down;
+  }
+}
