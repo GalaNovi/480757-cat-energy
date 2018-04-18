@@ -14,7 +14,9 @@
   font-style: normal;
 }
 
+@import "visually-hidden.less";
 @import "variables.less";
+@import "mixins.less";
 
 body {
   margin: 0;
@@ -32,5 +34,9 @@ a {
   text-decoration: none;
 }
 
+@import "blocks/.button.less";
 @import "blocks/.page-header.less";
+@import "blocks/.main-nav.less";
 @import "blocks/.nav-list.less";
+@import "blocks/.page-main.less";
+@import "blocks/.food-program.less";
