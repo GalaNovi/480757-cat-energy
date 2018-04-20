@@ -12,6 +12,16 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.page-footer__logo-image {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .page-footer__copyrights {
   display: flex;
   justify-content: space-between;
@@ -28,6 +38,18 @@
   font-family: "Arial", sans-serif;
   .font(16px, 16px, 400, #444444);
   text-transform: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__copyrights-link:hover + .page-footer__copyrights-icon {
+  fill: @brand-color;
+}
+
+.page-footer__copyrights-link:active + .page-footer__copyrights-icon {
+  opacity: 0.3;
 }
 
 .page-footer__copyrights-icon {
