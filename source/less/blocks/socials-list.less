@@ -1,11 +1,24 @@
 .socials-list {
-  margin: 0 20px;
-  margin-bottom: 20px;
-  padding: 0;
-  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
+  .list-reset;
+  padding-bottom: 17px;
+  margin-left: 73px;
+  width: 125px;
   list-style: none;
+}
+
+.socials-list__wrapper {
+  margin: 0 20px 6px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.socials-list__item {
+  &:first-child {
+    margin-right: -3px;
+  }
 }
 
 .socials-list__link {

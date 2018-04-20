@@ -3,27 +3,35 @@
   background-color: @gray-background;
 }
 
-.page-footer__copyrights {
-  margin: 0 20px;
-}
-
 .page-footer__logo-wrapper {
-  margin: 37px 20px 20px;
-  padding-bottom: 30px;
+  margin: 0 20px 23px;
+  padding: 39px 0 28px;
 
   text-align: center;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.page-footer__copyrights {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin: 0 20px;
+  min-height: 53px;
+}
+
 .page-footer__copyrights-link {
+  margin-left: -1px;
+  margin-bottom: 13px;
+
   font-family: "Arial", sans-serif;
   .font(16px, 16px, 400, #444444);
   text-transform: none;
 }
 
 .page-footer__copyrights-icon {
-  width: 50px;
-  height: 40px;
-  fill: #444444;
+  margin-bottom: 3px;
+
+  fill: #666666;
 }

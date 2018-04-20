@@ -1,19 +1,44 @@
 .result-list {
   padding: 0;
+  padding-top: 5px;
 
   list-style: none;
 }
 
 .result-list__item {
-  .font(24px, 24px);
+  position: relative;
+
+  min-width: 122px;
+  margin-bottom: 30px;
+  padding: 14px 0 18px;
+
+  display: inline-block;
+
+  .font(24px, 22px);
+  text-align: center;
 
   border: 1px solid rgba(205, 205, 205, 1);
   border-radius: 3px;
+
+  &:first-child {
+    margin-right: 28px;
+  }
 }
 
 .result-list__description {
+  position: absolute;
+  bottom: -16px;
+  left: 17px;
+
+  padding: 0 5px;
+
+  width: 87px;
+
   text-transform: none;
   font-family: "Arial", sans-serif;
-  .font(14px, 18px);
+  .font(12px, 12px);
   color: rgba(68, 68, 68, 1);
+
+  background-color: @gray-background;
+  box-sizing: border-box;
 }
