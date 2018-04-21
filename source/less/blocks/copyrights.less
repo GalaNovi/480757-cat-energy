@@ -1,0 +1,35 @@
+.copyrights {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin: 0 auto;
+  min-height: 44px;
+  max-width: 280px;
+}
+
+.copyrights__link {
+  margin-left: -1px;
+  margin-bottom: 13px;
+
+  .arial(16px, 16px, 400, #444444);
+  text-transform: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyrights__link:hover + .copyrights__icon {
+  fill: @brand-color;
+}
+
+.copyrights__link:active + .copyrights__icon {
+  opacity: 0.3;
+}
+
+.copyrights__icon {
+  margin-bottom: 3px;
+
+  fill: #666666;
+}
