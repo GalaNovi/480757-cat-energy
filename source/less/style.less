@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldregular.woff"), url("../fonts/oswaldregular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldmedium.woff"), url("../fonts/oswaldmedium.woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@import "normalize.less";
+@import "visually-hidden.less";
+@import "variables.less";
+@import "mixins.less";
+
+body {
+  margin: 0 auto;
+  width: 320px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: @text-black;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "blocks/button.less";
+@import "blocks/page-header.less";
+@import "blocks/main-nav.less";
+@import "blocks/nav-list.less";
+@import "blocks/page-main.less";
+@import "blocks/food-program.less";
+@import "blocks/categories.less";
+@import "blocks/features.less";
+@import "blocks/example.less";
+@import "blocks/result-list.less";
+@import "blocks/photo-toggles.less";
+@import "blocks/page-footer.less";
+@import "blocks/contacts.less";
+@import "blocks/for-dealers.less";
+@import "blocks/socials-list.less";
+@import "blocks/catalog.less";
+@import "blocks/parameters.less";
+@import "blocks/offer.less";
+@import "blocks/questionnaire.less";
+@import "blocks/form.less";
+@import "blocks/photos-list.less";
