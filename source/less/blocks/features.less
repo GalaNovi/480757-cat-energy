@@ -1,5 +1,5 @@
 .features {
-  margin-bottom: 46px;
+  margin: 0 auto 25px;
   padding: 0 20px;
 
   text-transform: none;
@@ -13,9 +13,12 @@
 }
 
 .features__list {
-  .indent-reset;
-  margin-left: 80px;
-  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 25px;
 
   .arial(14px, 18px);
 
@@ -25,12 +28,15 @@
 .features__item {
   position: relative;
 
-  margin-bottom: 26px;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  padding-left: 80px;
+  min-height: 65px;
 
   &::before {
     position: absolute;
-    top: -2px;
-    left: -80px;
+    top: 3px;
+    left: 0;
 
     width: 60px;
     height: 60px;
@@ -42,8 +48,8 @@
 
   &--sheet::after {
     position: absolute;
-    top: -2px;
-    left: -80px;
+    top: 3px;
+    left: 0;
 
     width: 60px;
     height: 60px;
@@ -55,8 +61,8 @@
 
   &--powder::after {
     position: absolute;
-    top: -2px;
-    left: -80px;
+    top: 3px;
+    left: 0;
 
     width: 60px;
     height: 60px;
@@ -68,8 +74,8 @@
 
   &--tableware::after {
     position: absolute;
-    top: -2px;
-    left: -80px;
+    top: 3px;
+    left: 0;
 
     width: 60px;
     height: 60px;
@@ -81,8 +87,8 @@
 
   &--clock::after {
     position: absolute;
-    top: -2px;
-    left: -80px;
+    top: 3px;
+    left: 0;
 
     width: 60px;
     height: 60px;
