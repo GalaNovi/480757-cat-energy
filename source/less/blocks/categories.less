@@ -18,12 +18,11 @@
 .categories__heading {
   position: relative;
 
-  margin: 0;
+  .indent-reset;
   margin-left: 91px;
   margin-bottom: 29px;
-  padding: 0;
 
-  .font(24px, 37px, 400);
+  .font(24px, 37px);
 
   &::before {
     position: absolute;
@@ -67,15 +66,13 @@
 }
 
 .categories__text {
-  margin: 0 20px;
-  margin-bottom: 18px;
+  margin: 0 20px 18px;
   padding-bottom: 22px;
 
-  font-family: "Arial", sans-serif;
-  .font(14px, 18px, 400);
+  .arial(14px, 18px);
   text-transform: none;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: @gray-line;
 }
 
 .categories__link {
