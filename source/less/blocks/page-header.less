@@ -4,6 +4,17 @@
   .font(20px, 20px, 500);
 }
 
+@media (min-width: 768px) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    .font(18px, 25px);
+  }
+}
+
 .page-header__logo {
   display: block;
   padding: 14px 20px 12px;
@@ -14,5 +25,27 @@
 
   &:active:not(&--disabled) {
     opacity: 0.6;
+  }
+}
+
+.page-header__button {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+
+  width: 24px;
+  height: 18px;
+
+  background-color: transparent;
+  background-image: url("../img/icon-mobile-menu.svg");
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .page-header__button {
+    display: none;
   }
 }
