@@ -1,6 +1,8 @@
-// .categiries {
-//
-// }
+@media (min-width: @tablet-width) {
+  .categories {
+    padding: 0 30px;
+  }
+}
 
 .categories__list {
   display: flex;
@@ -10,6 +12,12 @@
   padding: 0 20px;
 
   list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .categories__list {
+    .indent-reset;
+  }
 }
 
 .categories__item {

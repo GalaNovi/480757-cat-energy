@@ -3,6 +3,14 @@
   padding: 0 20px;
 
   text-transform: none;
+
+  border-bottom: @gray-line;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    padding: 0 30px;
+  }
 }
 
 .features-heading {
@@ -10,6 +18,12 @@
   margin-top: -3px;
 
   .font(36px, 60px);
+}
+
+@media (min-width: @tablet-width) {
+  .features-heading {
+    .font(60px, 60px);
+  }
 }
 
 .features__list {
@@ -20,9 +34,13 @@
   padding: 0;
   padding-top: 25px;
 
-  .arial(14px, 18px);
-
   list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    width: 708px;
+  }
 }
 
 .features__item {
@@ -99,6 +117,68 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .features__item {
+    margin-right: 175px;
+    margin-bottom: 15px;
+    padding: 115px 0 50px;
+    width: 210px;
+    min-height: 230px;
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &--sheet::after {
+      top: 10px;
+      left: 10px;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &--powder::after {
+      top: 10px;
+      left: 10px;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &--tableware::after {
+      top: 10px;
+      left: 10px;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &--clock::after {
+      top: 10px;
+      left: 10px;
+
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
 .features__text {
   .indent-reset;
+
+  .arial(14px, 18px);
+}
+
+@media (min-width: @tablet-width) {
+  .features__text {
+    .arial(16px, 24px);
+  }
 }
