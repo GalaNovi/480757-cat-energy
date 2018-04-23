@@ -11,24 +11,6 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .nav-list {
-    color: #ffffff;
-    &::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-
-      width: 720px;
-      height: 696px;
-
-      background: @brand-color url(../img/index-background-desktop.jpg) no-repeat;
-
-      content: "";
-    }
-  }
-}
-
 .nav-list__item {
   width: 100%;
   text-align: center;
@@ -83,13 +65,5 @@
     background-color: @brand-color;
 
     content: "";
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .nav-list__link {
-    &--active::before {
-      background-color: #ffffff;
-    }
   }
 }
