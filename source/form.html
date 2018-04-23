@@ -31,44 +31,48 @@
       <section class="questionnaire">
         <h2 class="questionnaire__heading">Заполните анкету и мы подберем программу питания для вашего кота</h2>
         <form class="questionnaire__form form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__fieldset">
-            <p class="form__item">
-              <label class="form__label" for="name-field">Имя:<sup>*</sup></label>
-              <input class="form__field" id="name-field" type="text" name="name" placeholder="Барсик" required>
-            </p>
-            <p class="form__item">
-              <label class="form__label" for="weight-field">Вес (кг):<sup>*</sup></label>
-              <input class="form__field" id="weight-field" type="number" name="weight" placeholder="7" required>
-            </p>
-            <p class="form__item">
-              <label class="form__label" for="age-field">Возраст (лет):</label>
-              <input class="form__field" id="age-field" type="number" name="age" placeholder="7">
-            </p>
-          </fieldset>
-          <fieldset class="form__fieldset form__fieldset--border">
-            <p class="form__item">
-              <input class="form__radio visually-hidden" id="weight-loss" type="radio" name="program-option" value="weight-loss" checked>
-              <label class="form__label form__label--for-radio" for="weight-loss">Похудение</label>
-            </p>
-            <p class="form__item">
-              <input class="form__radio visually-hidden" id="set-of-weight" type="radio" name="program-option" value="set-of-weight">
-              <label class="form__label form__label--for-radio" for="set-of-weight">Набор массы</label>
-            </p>
-            <p class="form__item">
-              <input class="form__radio visually-hidden" id="advice" type="radio" name="program-option" value="advice">
-              <label class="form__label form__label--for-radio" for="advice">Не знаю (нужен ваш совет)</label>
-            </p>
-          </fieldset>
+          <div class="form__row-wrapper">
+            <fieldset class="form__fieldset">
+              <p class="form__item">
+                <label class="form__label" for="name-field">Имя:<sup>*</sup></label>
+                <input class="form__field" id="name-field" type="text" name="name" placeholder="Барсик" required>
+              </p>
+              <p class="form__item">
+                <label class="form__label" for="weight-field">Вес (кг):<sup>*</sup></label>
+                <input class="form__field" id="weight-field" type="number" name="weight" placeholder="7" required>
+              </p>
+              <p class="form__item">
+                <label class="form__label" for="age-field">Возраст (лет):</label>
+                <input class="form__field" id="age-field" type="number" name="age" placeholder="7">
+              </p>
+            </fieldset>
+            <fieldset class="form__fieldset form__fieldset--border">
+              <p class="form__item">
+                <input class="form__radio visually-hidden" id="weight-loss" type="radio" name="program-option" value="weight-loss" checked>
+                <label class="form__label form__label--for-radio" for="weight-loss">Похудение</label>
+              </p>
+              <p class="form__item">
+                <input class="form__radio visually-hidden" id="set-of-weight" type="radio" name="program-option" value="set-of-weight">
+                <label class="form__label form__label--for-radio" for="set-of-weight">Набор массы</label>
+              </p>
+              <p class="form__item">
+                <input class="form__radio visually-hidden" id="advice" type="radio" name="program-option" value="advice">
+                <label class="form__label form__label--for-radio" for="advice">Не знаю (нужен ваш совет)</label>
+              </p>
+            </fieldset>
+          </div>
           <fieldset class="form__fieldset">
             <legend class="form__legend">Контактные данные (владельца кота)</legend>
-            <p class="form__item">
-              <label class="form__label" for="email-field">E-mail:<sup>*</sup></label>
-              <input class="form__field form__field--email" id="email-field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-            </p>
-            <p class="form__item">
-              <label class="form__label" for="phone-field">Телефон:<sup>*</sup></label>
-              <input class="form__field form__field--phone" id="phone-field" type="tel" name="phone" placeholder="8(960)900-60-90" required>
-            </p>
+            <div class="form__row-wrapper">
+              <p class="form__item">
+                <label class="form__label" for="email-field">E-mail:<sup>*</sup></label>
+                <input class="form__field form__field--email" id="email-field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </p>
+              <p class="form__item">
+                <label class="form__label" for="phone-field">Телефон:<sup>*</sup></label>
+                <input class="form__field form__field--phone" id="phone-field" type="tel" name="phone" placeholder="8(960)900-60-90" required>
+              </p>
+            </div>
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">Комментарий</legend>
@@ -79,25 +83,29 @@
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">Дополнительно</legend>
-            <p class="form__item">
-              <input class="form__checkbox visually-hidden" id="sweetener" type="checkbox" name="sweetener" value="yes" checked>
-                <label class="form__label form__label--for-checkbox" for="sweetener">Сахарозаменитель</label>
-            </p>
-            <p class="form__item">
-              <input class="form__checkbox visually-hidden" id="water" type="checkbox" name="water" value="yes">
-              <label class="form__label form__label--for-checkbox" for="water">Питьевая вода</label>
-            </p>
-            <p class="form__item">
-              <input class="form__checkbox visually-hidden" id="milk" type="checkbox" name="milk" value="yes">
-              <label class="form__label form__label--for-checkbox" for="milk">Молоко</label>
-            </p>
-            <p class="form__item">
-              <input class="form__checkbox visually-hidden" id="vitamins" type="checkbox" name="vitamins" value="yes">
-              <label class="form__label form__label--for-checkbox" for="vitamins">Витамины</label>
-            </p>
+            <div class="form__checkbox-wrapper">
+              <p class="form__item form__item">
+                <input class="form__checkbox visually-hidden" id="sweetener" type="checkbox" name="sweetener" value="yes" checked>
+                  <label class="form__label form__label--for-checkbox" for="sweetener">Сахарозаменитель</label>
+              </p>
+              <p class="form__item form__item">
+                <input class="form__checkbox visually-hidden" id="water" type="checkbox" name="water" value="yes">
+                <label class="form__label form__label--for-checkbox" for="water">Питьевая вода</label>
+              </p>
+              <p class="form__item form__item">
+                <input class="form__checkbox visually-hidden" id="milk" type="checkbox" name="milk" value="yes">
+                <label class="form__label form__label--for-checkbox" for="milk">Молоко</label>
+              </p>
+              <p class="form__item form__item">
+                <input class="form__checkbox visually-hidden" id="vitamins" type="checkbox" name="vitamins" value="yes">
+                <label class="form__label form__label--for-checkbox" for="vitamins">Витамины</label>
+              </p>
+            </div>
           </fieldset>
-          <button class="questionnaire__button button" type="submit">Отправить заявку</button>
-          <small class="questionnaire__specification">* — Обязательные поля</small>
+          <div class="form__row-wrapper">
+            <button class="questionnaire__button button" type="submit">Отправить заявку</button>
+            <small class="questionnaire__specification">* — Обязательные поля</small>
+          </div>
         </form>
       </section>
     </main>

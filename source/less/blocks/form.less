@@ -1,6 +1,3 @@
-// .form {
-// }
-
 .form__fieldset {
   margin: 0 20px;
   padding: 10px 0;
@@ -14,11 +11,21 @@
 }
 
 .form__item {
+  display: flex;
+  align-items: center;
+
   .indent-reset;
   margin-bottom: 14px;
 }
 
+@media (min-width: @tablet-width) {
+  .form__item {
+    min-width: 324px;
+  }
+}
+
 .form__field {
+  flex-grow: 1;
   margin: 0;
   padding: 12px 15px;
 
@@ -99,4 +106,18 @@
 .form__legend {
   text-transform: none;
   .font(24px, 24px)
+}
+
+@media (min-width: @tablet-width) {
+  .form__checkbox-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__row-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
