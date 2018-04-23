@@ -68,12 +68,16 @@
 
     width: auto;
     min-width: 114px;
-    // max-width: 142px;
     padding: 0 8px;
-    // margin: 0 auto;
 
     .arial(14px, 14px);
 
     background-color: #ffffff;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .result-list__description {
+    background-color: @gray-background;
   }
 }

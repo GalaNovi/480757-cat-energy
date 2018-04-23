@@ -101,6 +101,45 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .categories__item {
+    width: 570px;
+    padding: 75px 52px 60px;
+    margin-right: 80px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &::before {
+      top: 92px;
+      left: auto;
+      right: 60px;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--weight-loss::after {
+      top: 92px;
+      left: auto;
+      right: 80px;
+
+      width: 140px;
+      height: 194px;
+    }
+
+    &--set-of-weight::after {
+      top: 140px;
+      left: auto;
+      right: 30px;
+
+      width: 268px;
+      height: 112px;
+    }
+  }
+}
+
 .categories__heading {
   .indent-reset;
   margin-left: 91px;

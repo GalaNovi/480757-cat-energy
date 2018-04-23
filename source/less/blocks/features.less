@@ -13,6 +13,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .features {
+    border: none;
+  }
+}
+
 .features-heading {
   .indent-reset;
   margin-top: -3px;
@@ -40,6 +46,12 @@
 @media (min-width: @tablet-width) {
   .features__list {
     width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__list {
+    width: 1220px;
   }
 }
 
@@ -167,6 +179,20 @@
 
       width: 80px;
       height: 80px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__item {
+    margin-right: 80px;
+
+    &:nth-child(even) {
+      margin-right: 80px;
+    }
+
+    &:nth-child(n4) {
+      margin-right: 0;
     }
   }
 }
