@@ -4,13 +4,6 @@
   .list-reset;
 }
 
-@media (min-width: @tablet-width) {
-  .nav-list {
-    justify-content: space-between;
-    width: 450px;
-  }
-}
-
 .nav-list__item {
   width: 100%;
   text-align: center;
@@ -19,18 +12,6 @@
 
   &:last-child {
     border-bottom: 1px solid #e6e6e6;
-  }
-}
-
-@media (min-width: 768px) {
-  .nav-list__item {
-    width: auto;
-
-    border: none;
-
-    &:last-child {
-      border: none;
-    }
   }
 }
 
@@ -67,3 +48,24 @@
     content: "";
   }
 }
+
+// ==========================TABLET============================
+
+@media (min-width: @tablet-width) {
+  .nav-list {
+    justify-content: space-between;
+    width: 450px;
+  }
+
+  .nav-list__item {
+    width: auto;
+
+    border: none;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+// ===========================DESKTOP==========================

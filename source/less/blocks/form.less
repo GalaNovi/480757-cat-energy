@@ -18,12 +18,6 @@
   margin-bottom: 14px;
 }
 
-@media (min-width: @tablet-width) {
-  .form__item {
-    min-width: 324px;
-  }
-}
-
 .form__field {
   flex-grow: 1;
   margin: 0;
@@ -108,12 +102,20 @@
   .font(24px, 24px)
 }
 
+// ===========================TABLET==========================
+
 @media (min-width: @tablet-width) {
+  .form__item {
+    min-width: 324px;
+  }
+
   .form__checkbox-wrapper {
     display: flex;
     flex-wrap: wrap;
   }
 }
+
+// =========================DESKTOP===========================
 
 @media (min-width: @desktop-width) {
   .form__row-wrapper {

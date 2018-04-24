@@ -3,54 +3,11 @@
   background-color: @gray-background;
 }
 
-@media (min-width: @tablet-width) {
-  .example {
-    background-color: #ffffff;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .example {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-
-    padding: 0 110px;
-
-    background: linear-gradient(to bottom, #ffffff 0px, #ffffff 190px, @gray-background 190px);
-  }
-}
-
 .example__heading {
   margin: -3px 20px 23px;
 
   .font(36px, 60px);
   text-transform: none;
-}
-
-@media (min-width: @tablet-width) {
-  .example__heading {
-    margin: 0 30px 50px;
-
-    .font(60px, 60px);
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .example__heading {
-    position: absolute;
-    top: 50px;
-    left: 110px;
-
-    .indent-reset;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .example__result-wrapper {
-    padding: 265px 0 60px;
-    width: 440px;
-  }
 }
 
 .example__text {
@@ -61,22 +18,9 @@
   text-transform: none;
 }
 
-@media (min-width: @tablet-width) {
-  .example__text {
-    margin: 0 30px;
-    .arial(16px, 24px);
-  }
-}
-
 .example__result {
   margin: 20px auto;
   margin-bottom: 0px;
-}
-
-@media (min-width: @tablet-width) {
-  .example__result {
-    margin: 20px 30px;
-  }
 }
 
 .example__total-cost {
@@ -88,7 +32,28 @@
   .font(14px, 20px);
 }
 
+// ==========================TABLET===========================
+
 @media (min-width: @tablet-width) {
+  .example {
+    background-color: #ffffff;
+  }
+
+  .example__heading {
+    margin: 0 30px 50px;
+
+    .font(60px, 60px);
+  }
+
+  .example__text {
+    margin: 0 30px;
+    .arial(16px, 24px);
+  }
+
+  .example__result {
+    margin: 20px 30px;
+  }
+
   .example__total-cost {
     float: right;
     margin-top: -120px;
@@ -100,7 +65,32 @@
   }
 }
 
+// ========================DESKTOP=============================
+
 @media (min-width: @desktop-width) {
+  .example {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 110px;
+
+    background: linear-gradient(to bottom, #ffffff 0px, #ffffff 190px, @gray-background 190px);
+  }
+
+  .example__heading {
+    position: absolute;
+    top: 50px;
+    left: 110px;
+
+    .indent-reset;
+  }
+
+  .example__result-wrapper {
+    padding: 265px 0 60px;
+    width: 440px;
+  }
+
   .example__total-cost {
     float: none;
     width: auto;

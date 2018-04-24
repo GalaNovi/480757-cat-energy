@@ -4,21 +4,12 @@
   .font(20px, 20px, 500);
 }
 
-@media (min-width: 768px) {
-  .page-header {
-    display: flex;
-    justify-content: space-between;
-
-    padding: 0 30px;
-
-    .font(18px, 25px);
-  }
-}
-
 .page-header__logo {
   display: block;
-  padding: 14px 20px 11px;
+  padding: 11px 20px 14px;
   margin-bottom: 1px;
+
+  width: 231px;
 
   &:hover:not(&--disabled) {
     opacity: 0.8;
@@ -45,8 +36,21 @@
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+// ==============================TABLET===========================
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    .font(18px, 25px);
+  }
+
   .page-header__button {
     display: none;
   }
 }
+
+// =========================DESKTOP==============================

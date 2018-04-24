@@ -6,12 +6,6 @@
   list-style: none;
 }
 
-@media (min-width: @tablet-width) {
-  .result-list {
-    width: 380px;
-  }
-}
-
 .result-list__item {
   position: relative;
 
@@ -33,19 +27,6 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .result-list__item {
-    min-width: 162px;
-    padding: 20px 0 20px;
-
-    .font(30px, 37px);
-
-    &:first-child {
-      margin-right: 42px;
-    }
-  }
-}
-
 .result-list__description {
   position: absolute;
   bottom: -16px;
@@ -61,7 +42,24 @@
   background-color: @gray-background;
 }
 
+// ===========================TABLET==============================
+
 @media (min-width: @tablet-width) {
+  .result-list {
+    width: 380px;
+  }
+
+  .result-list__item {
+    min-width: 162px;
+    padding: 20px 0 20px;
+
+    .font(30px, 37px);
+
+    &:first-child {
+      margin-right: 42px;
+    }
+  }
+
   .result-list__description {
     bottom: -6px;
     left: 0;
@@ -75,6 +73,8 @@
     background-color: #ffffff;
   }
 }
+
+// ==========================DESKTOP==============================
 
 @media (min-width: @desktop-width) {
   .result-list__description {

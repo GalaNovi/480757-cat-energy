@@ -3,23 +3,6 @@
   background-color: @gray-background;
 }
 
-@media (min-width: @tablet-width) {
-  .page-footer {
-    padding-bottom: 0;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page-footer__bottom-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0 30px;
-    min-height: 150px;
-  }
-}
-
 .page-footer__logo-wrapper {
   margin: 0 20px 23px;
   padding: 39px 0 28px;
@@ -27,14 +10,6 @@
   text-align: center;
 
   border-bottom: @gray-line;
-}
-
-@media (min-width: @tablet-width) {
-  .page-footer__logo-wrapper {
-    .indent-reset;
-    margin-right: auto;
-    border: none;
-  }
 }
 
 .page-footer__logo-image {
@@ -46,3 +21,28 @@
     opacity: 0.6;
   }
 }
+
+// ========================TABLET==========================
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding-bottom: 0;
+  }
+
+  .page-footer__bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 30px;
+    min-height: 150px;
+  }
+
+  .page-footer__logo-wrapper {
+    .indent-reset;
+    margin-right: auto;
+    border: none;
+  }
+}
+
+// ===============================DESKTOP==========================
