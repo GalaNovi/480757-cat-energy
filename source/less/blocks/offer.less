@@ -1,21 +1,36 @@
+.offer {
+  margin-bottom: 35px;
+}
+
 .offer__link {
   position: relative;
 
   display: block;
-  margin: 0 20px;
-  width: 280px;
+  padding-top: 187px;
   min-height: 289px;
 
   text-align: center;
 
   background: @brand-color url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+
+  &:before {
+    position: absolute;
+    top: 65px;
+    left: 113px;
+
+    width: 55px;
+    height: 60px;
+
+    background: url("../img/icon-gift.svg") no-repeat;
+
+    content: "";
+  }
 }
 
 .offer__text {
   display: inline-block;
   .indent-reset;
-  margin-top: 190px;
-  width: 165px;
+  width: 150px;
 
   .arial;
   text-transform: none;
