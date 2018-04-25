@@ -1,12 +1,33 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 32px;
+}
+
 .form__fieldset {
-  margin: 0 20px;
-  padding: 10px 0;
+  .indent-reset;
+  margin-bottom: 9px;
 
   border: none;
 
   &--border {
-    border-top: 1px solid rgba(237, 237, 237, 1);
-    border-bottom: 1px solid rgba(237, 237, 237, 1);
+    margin: 0 -20px;
+    padding: 25px 20px 2px;
+    border: @gray-line;
+  }
+
+  &--contact-info {
+    padding-top: 28px;
+  }
+
+  &--comment {
+    padding-top: 5px;
+    margin-bottom: 12px;
+  }
+
+  &--additional {
+    margin-bottom: 20px;
   }
 }
 
@@ -16,24 +37,38 @@
 
   .indent-reset;
   margin-bottom: 14px;
+
+  &--checkbox {
+    margin-bottom: 9px;
+    padding-top: 5px;
+  }
 }
 
 .form__field {
   flex-grow: 1;
   margin: 0;
-  padding: 12px 15px;
+  padding: 12px 15px 13px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
+
+  &--email,
+  &--phone {
+    position: relative;
+    padding-right: 45px;
+  }
 }
 
 .form__label {
   position: relative;
 
+  margin-right: 12px;
+
   cursor: pointer;
 
   &--for-radio,
   &--for-checkbox {
-    margin-left: 46px;
+    margin-left: 45px;
+    margin-bottom: 9px;
   }
 
   &--for-radio::before,
@@ -41,7 +76,7 @@
   &--for-radio::after,
   &--for-checkbox::after {
     position: absolute;
-    top: -3px;
+    top: -5px;
     left: -46px;
 
     content: "";
@@ -56,7 +91,7 @@
   }
 
   &--for-radio::after {
-    top: 6px;
+    top: 4px;
     left: -37px;
 
     width: 12px;
@@ -97,9 +132,33 @@
   border-color: @brand-color;
 }
 
-.form__legend {
+.form__section-title {
+  display: flex;
+  .indent-reset;
+  margin-bottom: 34px;
   text-transform: none;
-  .font(24px, 24px)
+  .font(24px, 24px);
+
+  &::after {
+    flex-grow: 1;
+    margin-left: 21px;
+    margin-right: -20px;
+    margin-top: 14px;
+    min-width: 20px;
+    height: 3px;
+
+    background-color: @brand-color;
+    content: "";
+  }
+}
+
+.form__row-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionnaire__button {
+  margin-bottom: 21px;
 }
 
 // ===========================TABLET==========================
