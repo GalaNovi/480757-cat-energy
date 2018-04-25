@@ -1,13 +1,15 @@
 .food-program {
-  position: relative;
-
-  margin-bottom: 197px;
-  padding-top: 26px;
-  min-width: 320px;
-  min-height: 305px;
-
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
   text-align: center;
+}
 
+.food-program__heading-wrapper {
+  margin: 0 -20px;
+  padding-top: 26px;
+
+  min-height: 305px;
   background: @brand-color url("../img/index-background-mobile@1x.jpg") no-repeat center top;
   background-size: 100%;
 }
@@ -22,8 +24,6 @@
   text-align: center;
 
   &--inner-page {
-    position: static;
-
     padding: 15px 20px;
     padding-bottom: 27px;
 
@@ -39,21 +39,10 @@
 }
 
 .food-program__image {
-  position: absolute;
-  top: 166px;
-  left: 0;
-  right: 0;
-
-  margin: auto;
+  margin-top: -139px;
 }
 
 .food-program__button {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -175px;
-
-  margin: 0 20px;
   padding: 12px 30px 10px;
 
   .font(14px, 18px, 400, #ffffff);

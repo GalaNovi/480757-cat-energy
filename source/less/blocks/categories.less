@@ -1,9 +1,12 @@
+.categories {
+  margin-bottom: 17px;
+}
+
 .categories__list {
   display: flex;
   flex-wrap: wrap;
 
-  margin: 0;
-  padding: 0 20px;
+  .indent-reset;
 
   list-style: none;
 }
@@ -11,62 +14,63 @@
 .categories__item {
   position: relative;
 
-  padding-top: 30px;
-  padding-bottom: 19px;
+  padding: 30px 20px 19px;
   margin-bottom: 20px;
   background-color: @gray-background;
 
-  &::before {
-    position: absolute;
-
-    top: 24px;
-    left: 22px;
-
-    width: 50px;
-    height: 50px;
-
-    background: @brand-color;
-    border-radius: 50%;
-    content: "";
+  &:last-child {
+    margin-bottom: 0;
   }
+}
 
-  &--weight-loss::after {
+.categories__icon {
+  position: absolute;
+  top: 24px;
+  left: 22px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: @brand-color;
+  border-radius: 50%;
+
+  &--weight-loss::before {
     position: absolute;
-
-    top: 22px;
-    left: 30px;
+    top: -2px;
+    left: 8px;
 
     width: 35px;
     height: 49px;
 
     background: url("../img/icon-cat-slim.svg") no-repeat;
+
     content: "";
   }
 
-  &--set-of-weight::after {
+  &--set-of-weight::before {
     position: absolute;
-
-    top: 35px;
-    left: 13px;
+    top: 11px;
+    left: -9px;
 
     width: 67px;
     height: 28px;
 
     background: url("../img/icon-cat-pro.svg") no-repeat;
+
     content: "";
   }
 }
 
 .categories__heading {
   .indent-reset;
-  margin-left: 91px;
+  margin-left: 71px;
   margin-bottom: 29px;
 
   .font(24px, 37px);
 }
 
 .categories__text {
-  margin: 0 20px 18px;
+  margin: 0 0 18px;
   padding-bottom: 22px;
 
   .arial(14px, 18px);
@@ -76,19 +80,16 @@
 }
 
 .categories__link {
-  position: relative;
-
-  margin-left: 20px;
-
   .font(16px, 16px);
 
-  &::before {
-    position: absolute;
-    top: 6px;
-    right: -45px;
-
+  &::after {
+    display: inline-block;
+    margin-left: 12px;
+    margin-bottom: 2px;
     width: 33px;
     height: 11px;
+
+    vertical-align: center;
 
     background: url("../img/icon-right-arrow-long.svg") no-repeat;
     background-position: -8px;
@@ -98,12 +99,12 @@
     content: "";
   }
 
-  &:hover::before {
+  &:hover::after {
     background-position: 0;
   }
 
   &:active,
-  &:active::before {
+  &:active::after {
     opacity: 0.3;
   }
 }
