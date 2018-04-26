@@ -22,14 +22,6 @@
   .font(36px, 36px, 400, #ffffff);
   text-transform: none;
   text-align: center;
-
-  &--inner-page {
-    padding: 15px 20px;
-    padding-bottom: 27px;
-
-    text-align: left;
-    .font(36px, 60px);
-  }
 }
 
 .food-program__slogan {
@@ -52,47 +44,42 @@
 
 @media (min-width: @tablet-width) {
   .food-program {
-    padding: 0 30px;
     margin-bottom: 0;
-    min-height: 830px;
+  }
 
-    text-align: left;
-
+  .food-program__heading-wrapper {
+    .indent-reset;
+    padding: 47px 87px 0;
+    margin-bottom: 47px;
+    min-height: auto;
     background: none;
   }
 
   .food-program__heading {
-    position: static;
-
-    margin: 60px 87px 30px;
-    width: 420px;
+    .indent-reset;
+    margin-bottom: 42px;
+    width: 570px;
 
     .font(60px, 60px);
     text-align: left;
   }
 
   .food-program__slogan {
-    margin-left: 90px;
-
     .font(20px, 20px);
     text-align: left;
   }
 
   .food-program__image {
-    top: 180px;
-
-    text-align: center;
+    margin-top: -80px;
 
     z-index: -1;
+    order: 1;
   }
 
   .food-program__button {
-    position: static;
-
-    display: inline-block;
-    margin-left: 90px;
-    margin-top: 30px;
-    padding: 15px 30px 15px;
+    align-self: flex-start;
+    margin-left: 89px;
+    padding: 15px 29px 17px 25px;
 
     .font(20px, 20px, 400, #ffffff);
   }

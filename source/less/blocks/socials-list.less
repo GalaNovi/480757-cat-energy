@@ -37,13 +37,40 @@
 
 @media (min-width: @tablet-width) {
   .socials-list {
+    justify-content: flex-start;
     .list-reset;
+    margin-right: 0;
+    width: auto;
   }
 
   .socials-list__wrapper {
     .indent-reset;
 
     border: none;
+    .marking;
+  }
+
+  .socials-list__item {
+    margin-right: 35px;
+
+    &:first-child {
+      margin-right: 35px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // .socials-list__link--vkontakte svg {
+  //   width: 30px;
+  //   height: 16px;
+  // }
+
+  .socials-list__link svg {
+    // width: 30px;
+    // height: 16px;
+    transform: scale(1.4);
   }
 }
 

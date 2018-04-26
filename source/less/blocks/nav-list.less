@@ -55,17 +55,27 @@
 
 @media (min-width: @tablet-width) {
   .nav-list {
-    justify-content: space-between;
-    width: 450px;
+    margin: 0;
+    padding-top: 18px;
   }
 
   .nav-list__item {
+    margin-right: 36px;
     width: auto;
 
     border: none;
 
     &:last-child {
+      margin-right: 0;
       border: none;
+    }
+  }
+
+  .nav-list__link {
+    padding: 0;
+
+    &--active::before {
+      bottom: -9px;
     }
   }
 }

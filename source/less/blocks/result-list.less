@@ -46,12 +46,14 @@
 
 @media (min-width: @tablet-width) {
   .result-list {
-    width: 380px;
+    display: flex;
+    width: auto;
+    max-width: 500px;
   }
 
   .result-list__item {
     min-width: 162px;
-    padding: 20px 0 20px;
+    padding: 15px 25px 18px;
 
     .font(30px, 37px);
 
@@ -60,15 +62,28 @@
     }
   }
 
-  .result-list__description {
-    bottom: -6px;
+  .result-list__description-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: -13px;
     left: 0;
 
-    width: auto;
-    min-width: 114px;
-    padding: 0 8px;
+    width: 100%;
+    height: 20px;
 
-    .arial(14px, 14px);
+    background-color: transparent;
+  }
+
+  .result-list__description {
+    display: inline-block;
+    padding: 0 9px;
+    width: auto;
+    max-width: 146px;
+    bottom: auto;
+    left: auto;
+
+    .font(14px, 14px);
 
     background-color: #ffffff;
   }

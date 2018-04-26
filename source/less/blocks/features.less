@@ -69,10 +69,12 @@
 
 @media (min-width: @tablet-width) {
   .features {
-    padding: 0 30px;
+    margin-bottom: 0;
+    padding-top: 45px;
   }
 
   .features-heading {
+    margin-bottom: 44px;
     .font(60px, 60px);
   }
 
@@ -81,54 +83,32 @@
   }
 
   .features__item {
-    margin-right: 175px;
-    margin-bottom: 15px;
-    padding: 115px 0 50px;
-    width: 210px;
+    .indent-reset;
+    padding-top: 115px;
+    margin-right: 133px;
+    margin-bottom: 87px;
+    width: 250px;
     min-height: 230px;
 
     &:nth-child(even) {
       margin-right: 0;
     }
 
-    &::before {
-      top: 0;
-      left: 0;
+    &:last-child {
+      margin-bottom: 87px;
+    }
+  }
 
-      width: 80px;
-      height: 80px;
+  .features__icon {
+    width: 80px;
+    height: 80px;
+
+    &--powder {
+      background-position: center;
     }
 
-    &--sheet::after {
-      top: 10px;
-      left: 10px;
-
-      width: 80px;
-      height: 80px;
-    }
-
-    &--powder::after {
-      top: 10px;
-      left: 10px;
-
-      width: 80px;
-      height: 80px;
-    }
-
-    &--tableware::after {
-      top: 10px;
-      left: 10px;
-
-      width: 80px;
-      height: 80px;
-    }
-
-    &--clock::after {
-      top: 10px;
-      left: 10px;
-
-      width: 80px;
-      height: 80px;
+    &--tableware {
+      background-position: center;
     }
   }
 

@@ -19,6 +19,8 @@
   }
 }
 
+// ==============================TABLET===========================
+
 @media (max-width: @tablet-width) {
   .page-header__button {
     position: absolute;
@@ -89,16 +91,15 @@
   }
 }
 
-// ==============================TABLET===========================
-
 @media (min-width: @tablet-width) {
   .page-header {
+    padding-top: 24px;
+    .font(18px, 25px);
+  }
+
+  .page-header .container {
     display: flex;
     justify-content: space-between;
-
-    padding: 0 30px;
-
-    .font(18px, 25px);
   }
 
   .page-header__button {
