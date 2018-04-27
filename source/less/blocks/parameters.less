@@ -18,3 +18,33 @@
     text-align: right;
   }
 }
+
+// ==========================TABLET========================
+
+@media (min-width: @tablet-width) {
+  .parameters {
+    .font(16px, 16px);
+
+    td {
+      padding: 8px 0 7px;
+    }
+
+    tr {
+      border-bottom: 1px solid #cdcdcd;
+    }
+
+    &--additional {
+      width: auto;
+    }
+
+    &--additional tr {
+      border: none;
+    }
+
+    &--additional td {
+      &:last-child {
+        min-width: 95px;
+      }
+    }
+  }
+}

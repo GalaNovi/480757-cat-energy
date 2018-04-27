@@ -16,13 +16,13 @@
         <nav class="main-nav main-nav--nojs">
           <ul class="main-nav__list nav-list">
             <li class="nav-list__item">
-              <a class="nav-list__link" href="index.html">Главная</a>
+              <a class="nav-list__link nav-list__link--inner-page" href="index.html">Главная</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link nav-list__link--active">Каталог продукции</a>
+              <a class="nav-list__link nav-list__link--inner-page nav-list__link--inner-page--active nav-list__link--active">Каталог продукции</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="form.html">Подбор программы</a>
+              <a class="nav-list__link nav-list__link--inner-page" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -36,7 +36,7 @@
           <ul class="catalog__list">
             <li class="catalog__item">
               <div class="catalog__text-wrapper">
-                <a href="#"><h3 class="catalog__heading">Cat Energy<br class="brr"> Pro 500 г</h3></a>
+                <a href="#"><h3 class="catalog__heading">Cat Energy<br class="catalog__category-break"> Pro<br class="catalog__weight-break"> 500 г</h3></a>
                 <table class="catalog__parameters parameters">
                   <tr>
                     <td class="parameters__title">Объем</td>
@@ -57,7 +57,7 @@
             </li>
             <li class="catalog__item">
               <div class="catalog__text-wrapper">
-                <a href="#"><h3 class="catalog__heading">Cat Energy<br> Pro 1000 г</h3></a>
+                <a href="#"><h3 class="catalog__heading">Cat Energy<br class="catalog__category-break"> Pro<br class="catalog__weight-break"> 1000 г</h3></a>
                 <table class="catalog__parameters parameters">
                   <tr>
                     <td class="parameters__title">Объем</td>
@@ -78,7 +78,7 @@
             </li>
             <li class="catalog__item">
               <div class="catalog__text-wrapper">
-                <a href="#"><h3 class="catalog__heading">Cat Energy<br> Pro 500 г</h3></a>
+                <a href="#"><h3 class="catalog__heading">Cat Energy<br class="catalog__category-break"> Pro<br class="catalog__weight-break"> 500 г</h3></a>
                 <table class="catalog__parameters parameters">
                   <tr>
                     <td class="parameters__title">Объем</td>
@@ -99,7 +99,7 @@
             </li>
             <li class="catalog__item">
               <div class="catalog__text-wrapper">
-                <a href="#"><h3 class="catalog__heading">Cat Energy<br> Pro 1000 г</h3></a>
+                <a href="#"><h3 class="catalog__heading">Cat Energy<br class="catalog__category-break"> Pro<br class="catalog__weight-break"> 1000 г</h3></a>
                 <table class="catalog__parameters parameters">
                   <tr>
                     <td class="parameters__title">Объем</td>
@@ -120,7 +120,7 @@
             </li>
             <li class="catalog__item">
               <div class="catalog__text-wrapper">
-                <a href="#"><h3 class="catalog__heading">Cat Energy<br> Slim 500 г</h3></a>
+                <a href="#"><h3 class="catalog__heading">Cat Energy<br class="catalog__category-break"> Slim<br class="catalog__weight-break"> 500 г</h3></a>
                 <table class="catalog__parameters parameters">
                   <tr>
                     <td class="parameters__title">Объем</td>
@@ -141,7 +141,7 @@
             </li>
             <li class="catalog__item">
               <div class="catalog__text-wrapper">
-                <a href="#"><h3 class="catalog__heading">Cat Energy<br> Slim 1000 г</h3></a>
+                <a href="#"><h3 class="catalog__heading">Cat Energy<br class="catalog__category-break"> Slim<br class="catalog__weight-break"> 1000 г</h3></a>
                 <table class="catalog__parameters parameters">
                   <tr>
                     <td class="parameters__title">Объем</td>
@@ -162,8 +162,8 @@
             </li>
             <li class="catalog__item">
               <div class="catalog__text-wrapper">
-                <a href="#"><h3 class="catalog__heading">Cat Energy<br> Slim 500 г</h3></a>
-                <table class="catalog__parameters parameters parameters">
+                <a href="#"><h3 class="catalog__heading">Cat Energy<br class="catalog__category-break"> Slim<br class="catalog__weight-break"> 500 г</h3></a>
+                <table class="catalog__parameters parameters">
                   <tr>
                     <td class="parameters__title">Объем</td>
                     <td class="parameters__value">500 г</td>
@@ -182,7 +182,7 @@
               <a class="catalog__button button" href="#">Заказать</a>
             </li>
             <li class="catalog__item catalog__item--more">
-              <span class="catalog__cross"></span>
+              <span class="catalog__cross"></span><br>
               <h3 class="catalog__more-heading">Показать еще 100500 товаров</h3>
               <p class="catalog__more-text">На самом деле вкусов гораздо больше!</p>
               <a class="catalog__more-button button" href="#">Показать все</a>
@@ -198,10 +198,10 @@
                 <table class="catalog__parameters parameters parameters--additional">
                   <tr>
                     <td class="parameters__title">1 упаковка (100 г)</td>
-                    <td class="parameters__value">100 Р.</td>
+                    <td class="parameters__value">200 Р.</td>
                   </tr>
                 </table>
-                <a class="catalog__button button" href="#">Заказать</a>
+                <a class="catalog__button catalog__button--additional button" href="#">Заказать</a>
               </li>
               <li class="catalog__item catalog__item--additional">
                 <h3 class="catalog__heading catalog__heading--additional">Питьевая вода</h3>
@@ -211,7 +211,7 @@
                     <td class="parameters__value">50 Р.</td>
                   </tr>
                 </table>
-                <a class="catalog__button button" href="#">Заказать</a>
+                <a class="catalog__button catalog__button--additional button" href="#">Заказать</a>
               </li>
               <li class="catalog__item catalog__item--additional">
                 <h3 class="catalog__heading catalog__heading--additional">Молоко</h3>
@@ -221,7 +221,7 @@
                     <td class="parameters__value">100 Р.</td>
                   </tr>
                 </table>
-                <a class="catalog__button button" href="#">Заказать</a>
+                <a class="catalog__button catalog__button--additional button" href="#">Заказать</a>
               </li>
               <li class="catalog__item catalog__item--additional">
                 <h3 class="catalog__heading catalog__heading--additional">Витамины</h3>
@@ -231,7 +231,7 @@
                     <td class="parameters__value">300 Р.</td>
                   </tr>
                 </table>
-                <a class="catalog__button button" href="#">Заказать</a>
+                <a class="catalog__button catalog__button--additional button" href="#">Заказать</a>
               </li>
             </ul>
           </section>
@@ -248,7 +248,7 @@
       <div class="container">
         <section class="contacts">
           <h2 class="visually-hidden">Как нас найти</h2>
-          <div class="for-dealers">
+          <div class="for-dealers for-dealers--inner-page">
             <b class="for-dealers__heading">Приглашаем к сотрудничеству дилеров!</b>
             <p class="for-dealers__address">ул. Большая<br> Конюшенная, д. 19/8<br> <span class="for-dealers__city">Санкт-Петербург</span></p>
           </div>

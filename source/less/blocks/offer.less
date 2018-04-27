@@ -37,3 +37,30 @@
   color: #ffffff;
   vertical-align: top;
 }
+
+// =============================TABLET==========================
+
+@media (min-width: @tablet-width) {
+  .offer {
+    margin-bottom: 0;
+  }
+
+  .offer__link {
+    display: block;
+    padding: 72px 72px 68px 423px;
+    min-height: 200px;
+
+    text-align: left;
+
+    background: @brand-color url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+
+    &::before {
+      left: 90px;
+    }
+
+    .offer__text {
+      display: block;
+      width: 180px;
+    }
+  }
+}

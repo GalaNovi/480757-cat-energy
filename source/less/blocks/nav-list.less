@@ -99,5 +99,19 @@
     &--active::before {
       background-color: #ffffff;
     }
+
+    &--inner-page {
+      &:hover:not(&--active) {
+        color: @text-black-hover;
+      }
+
+      &:active:not(&--active) {
+        color: @text-black-down;
+      }
+
+      &--active::before {
+        background-color: @brand-color;
+      }
+    }
   }
 }
