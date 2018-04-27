@@ -21,8 +21,9 @@
 
 @media (min-width: @tablet-width) {
   .page-main {
-    margin-bottom: 75px;
+    margin-bottom: 78px;
   }
+
   .page-main__heading {
     padding: 47px 0px 25px;
     margin: 0;
@@ -30,5 +31,24 @@
     .font(60px, 60px);
 
     border: none;
+  }
+}
+
+// =======================DESKTOP=========================
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    margin-bottom: 0;
+  }
+
+  .page-main__heading {
+    padding-top: 65px;
+    padding-bottom: 23px;
+  }
+
+  .page-main__columns {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 12px;
   }
 }

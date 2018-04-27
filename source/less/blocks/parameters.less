@@ -48,3 +48,37 @@
     }
   }
 }
+
+// ============================DESKTOP=========================
+
+@media (min-width: @desktop-width) {
+  .parameters {
+    td {
+      padding: 8px 0 7px;
+    }
+
+    tr {
+      border-bottom: 1px solid #cdcdcd;
+    }
+
+    &--additional {
+      .indent-reset;
+      margin-top: 10px;
+      width: 325px;
+    }
+
+    &--additional tr {
+      border: none;
+    }
+
+    &--additional td {
+      outline: 1px solid;
+      .indent-reset;
+      &:last-child {
+        text-align: left;
+        min-width: auto;
+        width: 80px;
+      }
+    }
+  }
+}
