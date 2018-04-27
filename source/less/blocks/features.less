@@ -125,18 +125,24 @@
   }
 
   .features__list {
-    width: 1220px;
+    width: auto;
   }
 
   .features__item {
+    width: 245px;
     margin-right: 80px;
+    margin-bottom: 0;
 
-    &:nth-child(even) {
+    &:nth-child(2n) {
       margin-right: 80px;
     }
 
-    &:nth-child(n4) {
+    &:nth-child(4n) {
       margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

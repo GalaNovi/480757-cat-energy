@@ -10,3 +10,29 @@
     padding: 0 30px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .container {
+    position: relative;
+    width: 1440px;
+    padding: 0 110px;
+
+    &--index {
+      color: #ffffff;
+
+      &::before {
+        position: absolute;
+        top: -55px;
+        right: 1px;
+
+        width: 720px;
+        height: 696px;
+
+        background: @brand-color url("../img/index-background-desktop.jpg") no-repeat;
+
+        content: "";
+        z-index: -1;
+      }
+    }
+  }
+}

@@ -2,6 +2,19 @@
   margin: 0 -20px;
 }
 
+.contacts__map {
+  position: relative;
+}
+
+.contacts__interactive-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 362px;
+}
+
 .contacts__map-image {
   display: block;
   margin: auto;
@@ -17,6 +30,10 @@
   .contacts__map {
     height: 396px;
   }
+
+  .contacts__interactive-map {
+    height: 396px;
+  }
 }
 
 // ========================DESKTOP===================
@@ -24,5 +41,13 @@
 @media (min-width: @desktop-width) {
   .contacts {
     position: relative;
+  }
+
+  .contacts__map {
+    height: 399px;
+  }
+
+  .contacts__interactive-map {
+    height: 399px;
   }
 }
