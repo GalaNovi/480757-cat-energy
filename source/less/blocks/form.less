@@ -175,20 +175,18 @@
 
   .form__fieldset {
     margin-bottom: 52px;
+
     &--border {
       margin: 0;
       margin-bottom: 49px;
       padding: 33px 20px 0;
-      border: @gray-line;
     }
 
     &--contact-info {
-      padding-top: 28px;
       margin-bottom: 41px;
     }
 
     &--comment {
-      padding-top: 5px;
       margin-bottom: 45px;
     }
 
@@ -198,7 +196,6 @@
   }
 
   .form__item {
-    min-width: 324px;
     margin-bottom: 20px;
 
     &--checkbox {
@@ -320,5 +317,80 @@
 // =========================DESKTOP===========================
 
 @media (min-width: @desktop-width) {
+  .form__fieldset {
+    &--contact-info {
+      margin-bottom: 22px;
+    }
 
+    &--comment {
+      margin-bottom: 47px;
+    }
+
+    &--additional {
+      margin-bottom: 25px;
+    }
+  }
+
+  .form__row-wrapper .form__fieldset {
+    flex-grow: 1;
+    max-width: 570px;
+    margin: 0;
+  }
+
+  .form__row-wrapper .form__item {
+    max-width: 570px;
+  }
+
+  .form__item {
+    flex-grow: 1;
+
+    &--checkbox {
+      min-width: 245px;
+      width: 245px;
+      margin-right: 80px;
+
+      &:nth-child(even) {
+        margin-right: 80px;
+      }
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .form__field {
+    &--email {
+      margin-left: 5px;
+    }
+  }
+
+  .form__section-title {
+    margin-bottom: 75px;
+    .font(36px, 36px);
+
+    &--additional {
+      margin-bottom: 61px;
+    }
+
+    &::before {
+      margin-left: -110px;
+      width: 70px;
+    }
+
+    &::after {
+      margin-right: -110px;
+    }
+  }
+
+  .form__row-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 21px;
+
+    &--button {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
 }
