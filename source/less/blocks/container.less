@@ -1,19 +1,19 @@
 .container {
-  width: 320px;
+  position: relative;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 @media (min-width: @tablet-width) {
   .container {
-    width: 768px;
+    min-width: 768px;
     padding: 0 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .container {
-    position: relative;
     width: auto;
     max-width: 1440px;
     padding: 0 110px;
