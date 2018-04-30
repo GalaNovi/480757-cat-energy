@@ -1,31 +1,66 @@
-// .questionnaire {
-//
-// }
-
 .questionnaire__heading {
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0 20px;
+  .indent-reset;
+  margin-bottom: 38px;
   width: 270px;
 
   .font(14px, 18px);
 }
 
 .questionnaire__button {
-  margin: 0 20px;
   padding: 10px 50px;
 
   text-transform: uppercase;
-  .font(16px, 20px, 400, white);
+  .font(16px, 20px, 400, #ffffff);
   border: none;
 }
 
 .questionnaire__specification {
-  margin: 30px 0;
   display: block;
 
-  font-family: "Arial", sans-serif;
   text-transform: none;
-  .font(14px, 16px, 400, #444444);
+  .arial(14px, 16px, 400, #444444);
   text-align: center;
+}
+
+// ===========================TABLET========================
+
+@media (min-width: @tablet-width) {
+  .questionnaire {
+    margin-bottom: 18px;
+    padding: 30px 37px 0 40px;
+  }
+
+  .questionnaire__heading {
+    margin-bottom: 38px;
+    width: 350px;
+
+    .font(20px, 30px);
+  }
+
+  .questionnaire__button {
+    margin-right: 62px;
+    padding: 15px 66px 16px 63px;
+
+    .font(20px, 20px, 400, #ffffff);
+  }
+
+  .questionnaire__specification {
+    margin-top: 15px;
+    .font(16px, 16px);
+  }
+}
+
+// ========================DESKTOP=====================
+
+@media (min-width: @desktop-width) {
+  .questionnaire {
+    margin-bottom: 10px;
+    padding: 0;
+    padding-top: 32px;
+  }
+
+  .questionnaire__button {
+    margin-right: 80px;
+    min-width: 570px;
+  }
 }

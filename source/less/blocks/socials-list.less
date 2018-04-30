@@ -1,3 +1,9 @@
+.socials-list__wrapper {
+  margin-bottom: 15px;
+  padding-right: 10px;
+  border-bottom: @gray-line;
+}
+
 .socials-list {
   display: flex;
   flex-wrap: wrap;
@@ -5,14 +11,8 @@
 
   .list-reset;
   padding-bottom: 17px;
-  margin-left: 73px;
+  margin: auto;
   width: 125px;
-  list-style: none;
-}
-
-.socials-list__wrapper {
-  margin: 0 20px 6px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .socials-list__item {
@@ -32,3 +32,45 @@
     opacity: 0.3;
   }
 }
+
+// =============================TABLET=========================
+
+@media (min-width: @tablet-width) {
+  .socials-list {
+    justify-content: flex-start;
+    .list-reset;
+    margin-right: 0;
+    width: auto;
+  }
+
+  .socials-list__wrapper {
+    .indent-reset;
+
+    border: none;
+  }
+
+  .socials-list__item {
+    margin-right: 35px;
+
+    &:first-child {
+      margin-right: 35px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // .socials-list__link--vkontakte svg {
+  //   width: 30px;
+  //   height: 16px;
+  // }
+
+  .socials-list__link svg {
+    // width: 30px;
+    // height: 16px;
+    transform: scale(1.4);
+  }
+}
+
+// =========================DESKTOP==============================

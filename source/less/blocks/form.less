@@ -1,38 +1,79 @@
-// .form {
-// }
+.form {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 32px;
+}
 
 .form__fieldset {
-  margin: 0 20px;
-  padding: 10px 0;
+  .indent-reset;
+  margin-bottom: 9px;
 
   border: none;
 
   &--border {
-    border-top: 1px solid rgba(237, 237, 237, 1);
-    border-bottom: 1px solid rgba(237, 237, 237, 1);
+    margin: 0 -20px;
+    padding: 25px 20px 2px;
+    border: @gray-line;
+  }
+
+  &--contact-info {
+    padding-top: 28px;
+  }
+
+  &--comment {
+    padding-top: 5px;
+    margin-bottom: 12px;
+  }
+
+  &--additional {
+    margin-bottom: 20px;
   }
 }
 
 .form__item {
+  display: flex;
+  align-items: center;
+
   .indent-reset;
   margin-bottom: 14px;
+
+  &--checkbox {
+    margin-bottom: 9px;
+    padding-top: 5px;
+  }
 }
 
 .form__field {
+  flex-grow: 1;
   margin: 0;
-  padding: 12px 15px;
+  padding: 12px 15px 13px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
+
+  &::placeholder {
+    text-transform: uppercase;
+    .font(16px, 18px, 400, #444444);
+  }
+
+  &--email,
+  &--phone {
+    position: relative;
+    padding-right: 45px;
+  }
 }
 
 .form__label {
   position: relative;
 
+  margin-right: 12px;
+
   cursor: pointer;
 
   &--for-radio,
   &--for-checkbox {
-    margin-left: 46px;
+    margin-left: 45px;
+    margin-bottom: 9px;
   }
 
   &--for-radio::before,
@@ -40,7 +81,7 @@
   &--for-radio::after,
   &--for-checkbox::after {
     position: absolute;
-    top: -3px;
+    top: -5px;
     left: -46px;
 
     content: "";
@@ -52,11 +93,10 @@
 
     border: 1px solid rgba(205, 205, 205, 1);
     border-radius: 50%;
-    box-sizing: border-box;
   }
 
   &--for-radio::after {
-    top: 6px;
+    top: 4px;
     left: -37px;
 
     width: 12px;
@@ -71,7 +111,6 @@
     height: 30px;
 
     border: 1px solid rgba(205, 205, 205, 1);
-    box-sizing: border-box;
   }
 
   &--for-checkbox::after {
@@ -85,7 +124,6 @@
     border: 2px solid transparent;
     border-top: none;
     border-left: none;
-    box-sizing: border-box;
 
     transform: rotate(45deg);
   }
@@ -99,7 +137,260 @@
   border-color: @brand-color;
 }
 
-.form__legend {
+.form__section-title {
+  display: flex;
+  .indent-reset;
+  margin-bottom: 34px;
   text-transform: none;
-  .font(24px, 24px)
+  .font(24px, 24px);
+
+  &::after {
+    flex-grow: 1;
+    margin-left: 21px;
+    margin-right: -20px;
+    margin-top: 14px;
+    min-width: 20px;
+    height: 3px;
+
+    background-color: @brand-color;
+    content: "";
+  }
+}
+
+.form__row-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionnaire__button {
+  margin-bottom: 21px;
+}
+
+// ===========================TABLET==========================
+
+@media (min-width: @tablet-width) {
+  .form {
+    padding-top: 28px;
+  }
+
+  .form__fieldset {
+    margin-bottom: 52px;
+
+    &--border {
+      margin: 0;
+      margin-bottom: 49px;
+      padding: 33px 20px 0;
+    }
+
+    &--contact-info {
+      margin-bottom: 41px;
+    }
+
+    &--comment {
+      margin-bottom: 45px;
+    }
+
+    &--additional {
+      margin-bottom: 20px;
+    }
+  }
+
+  .form__item {
+    margin-bottom: 20px;
+
+    &--checkbox {
+      min-width: 285px;
+      margin-right: 60px;
+      margin-bottom: 34px;
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .form__label {
+    margin-right: 17px;
+
+    .font(20px, 20px);
+
+    &--for-radio,
+    &--for-checkbox {
+      margin-left: 67px;
+      margin-bottom: 13px;
+    }
+
+    &--for-checkbox {
+      margin-left: 58px;
+      margin-bottom: 13px;
+    }
+
+    &--for-radio::before,
+    &--for-checkbox::before,
+    &--for-radio::after,
+    &--for-checkbox::after {
+      top: -9px;
+      left: -60px;
+    }
+
+    &--for-radio::before {
+      width: 40px;
+      height: 40px;
+    }
+
+    &--for-radio::after {
+      top: 2px;
+      left: -49px;
+
+      width: 18px;
+      height: 18px;
+    }
+
+    &--for-checkbox::before {
+      left: -58px;
+      width: 40px;
+      height: 40px;
+    }
+
+    &--for-checkbox::after {
+      top: -2px;
+      left: -44px;
+    }
+  }
+
+  .form__field {
+    padding: 17px 18px 15px;
+
+    &::placeholder {
+      .font(20px, 20px);
+    }
+
+    &--comment {
+      min-height: 175px;
+    }
+  }
+
+  .form__section-title {
+    margin-bottom: 75px;
+    .font(36px, 36px);
+
+    &--additional {
+      margin-bottom: 61px;
+    }
+
+    &::before {
+      margin-left: -70px;
+      margin-right: 40px;
+      margin-top: 22px;
+      width: 30px;
+      height: 3px;
+
+      background-color: @brand-color;
+      content: "";
+    }
+
+    &::after {
+      margin-left: 41px;
+      margin-right: -67px;
+      margin-top: 22px;
+    }
+  }
+
+  .form__section-title .break {
+    display: none;
+  }
+
+  .form__checkbox-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__row-wrapper {
+    &--button {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+}
+
+// =========================DESKTOP===========================
+
+@media (min-width: @desktop-width) {
+  .form__fieldset {
+    &--contact-info {
+      margin-bottom: 22px;
+    }
+
+    &--comment {
+      margin-bottom: 47px;
+    }
+
+    &--additional {
+      margin-bottom: 25px;
+    }
+  }
+
+  .form__row-wrapper .form__fieldset {
+    flex-grow: 1;
+    max-width: 570px;
+    margin: 0;
+  }
+
+  .form__row-wrapper .form__item {
+    max-width: 570px;
+  }
+
+  .form__item {
+    flex-grow: 1;
+
+    &--checkbox {
+      min-width: 245px;
+      width: 245px;
+      margin-right: 80px;
+
+      &:nth-child(even) {
+        margin-right: 80px;
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .form__field {
+    &--email {
+      margin-left: 5px;
+    }
+  }
+
+  .form__section-title {
+    margin-bottom: 75px;
+    .font(36px, 36px);
+
+    &--additional {
+      margin-bottom: 61px;
+    }
+
+    &::before {
+      margin-left: -110px;
+      width: 70px;
+    }
+
+    &::after {
+      margin-right: -110px;
+    }
+  }
+
+  .form__row-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 21px;
+
+    &--button {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
 }

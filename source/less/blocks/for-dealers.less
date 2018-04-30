@@ -1,9 +1,10 @@
 .for-dealers {
   display: flex;
+  justify-content: space-between;
 
   padding: 29px 20px 25px;
 
-  background-color: white;
+  background-color: #ffffff;
 
   &--inner-page {
     background-color: @gray-background;
@@ -11,14 +12,69 @@
 }
 
 .for-dealers__heading {
-  margin-left: -1px;
-  margin-right: 25px;
-  font: inherit;
+  width: 125px;
+
+  .font(16px, 20px, 400);
 }
 
 .for-dealers__address {
   .indent-reset;
-  font-family: "Arial", sans-serif;
-  .font(14px, 20px, 400, #444);
+  width: 140px;
+
+  .arial(14px, 20px, 400, #444444);
   text-transform: none;
+}
+
+// ============================TABLET=========================
+
+@media (min-width: @tablet-width) {
+  .for-dealers {
+    padding: 66px 70px 55px;
+  }
+
+  .for-dealers__heading {
+    .font(20px, 25px);
+    width: 220px;
+  }
+
+  .for-dealers__address {
+    .indent-reset;
+    width: auto;
+    max-width: 200px;
+
+    .arial(16px, 20px);
+    text-align: right;
+  }
+
+  .for-dealers__city {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+
+// ===========================DESKTOP=========================
+
+@media (min-width: @desktop-width) {
+  .for-dealers {
+    position: absolute;
+    top: 95px;
+    left: 30px;
+    padding: 66px 90px 56px 76px;
+
+    background-color: #ffffff;
+
+    z-index: 1;
+
+    &--inner-page {
+      background-color: #ffffff;
+    }
+  }
+
+  .for-dealers__heading {
+    margin-right: 30px;
+  }
+
+  .for-dealers__address {
+    text-align: left;
+  }
 }

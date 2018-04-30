@@ -1,6 +1,7 @@
 .result-list {
   padding: 0;
   padding-top: 5px;
+  width: 280px;
 
   list-style: none;
 }
@@ -8,7 +9,7 @@
 .result-list__item {
   position: relative;
 
-  min-width: 122px;
+  min-width: 124px;
   margin-bottom: 30px;
   padding: 14px 0 18px;
 
@@ -16,6 +17,7 @@
 
   .font(24px, 22px);
   text-align: center;
+  vertical-align: top;
 
   border: 1px solid rgba(205, 205, 205, 1);
   border-radius: 3px;
@@ -35,10 +37,62 @@
   width: 87px;
 
   text-transform: none;
-  font-family: "Arial", sans-serif;
-  .font(12px, 12px);
-  color: rgba(68, 68, 68, 1);
+  .arial(12px, 12px, 400, rgba(68, 68, 68, 1));
 
   background-color: @gray-background;
-  box-sizing: border-box;
+}
+
+// ===========================TABLET==============================
+
+@media (min-width: @tablet-width) {
+  .result-list {
+    display: flex;
+    width: auto;
+    max-width: 500px;
+  }
+
+  .result-list__item {
+    min-width: 162px;
+    padding: 15px 25px 18px;
+
+    .font(30px, 37px);
+
+    &:first-child {
+      margin-right: 42px;
+    }
+  }
+
+  .result-list__description-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: -13px;
+    left: 0;
+
+    width: 100%;
+    height: 20px;
+
+    background-color: transparent;
+  }
+
+  .result-list__description {
+    display: inline-block;
+    padding: 0 9px;
+    width: auto;
+    max-width: 146px;
+    bottom: auto;
+    left: auto;
+
+    .font(14px, 14px);
+
+    background-color: #ffffff;
+  }
+}
+
+// ==========================DESKTOP==============================
+
+@media (min-width: @desktop-width) {
+  .result-list__description {
+    background-color: @gray-background;
+  }
 }

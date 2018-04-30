@@ -1,0 +1,164 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider__list {
+  position: relative;
+
+  .list-reset;
+  margin: 0 auto 29px;
+  width: 320px;
+  min-height: 240px;
+}
+
+.slider__item {
+  position: absolute;
+
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.slider__toggles {
+  display: flex;
+  padding-left: 5px;
+}
+
+.slider__toggle {
+  text-transform: uppercase;
+
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.slider__indicator {
+  position: relative;
+  align-self: center;
+
+  margin: 0;
+  margin-left: 13px;
+  margin-right: 11px;
+  width: 84px;
+  height: 14px;
+
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.slider__indicator-green {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+
+  width: 35px;
+  height: 6px;
+
+  background-color: @brand-color;
+  border-radius: 3px;
+
+  transition: transform 0.1s;
+
+  &--left {
+    transform: translateX(-37px);
+  }
+}
+
+// ===============================TABLET==============================
+
+@media (min-width: @tablet-width) {
+  .slider {
+    min-height: 631px;
+    background: linear-gradient(#ffffff, #ffffff 169px, @gray-background 169px);
+  }
+
+  .slider__list {
+    margin-bottom: 35px;
+  }
+
+  .slider__item--active {
+    height: 499px;
+  }
+
+  .slider__toggles {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .slider__toggle {
+    .indent-reset;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
+
+    .font(20px, 20px);
+
+    &:hover {
+      border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+    }
+
+    &:active {
+      border-color: transparent;
+    }
+  }
+
+  .slider__indicator {
+    margin-left: 22px;
+    margin-right: 22px;
+    width: 428px;
+    height: 0;
+
+    border: 3px solid #dcdcdc;
+    border-radius: 3px;
+  }
+
+  .slider__indicator-green {
+    position: absolute;
+    top: -17px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+    width: 34px;
+    height: 34px;
+
+    background: radial-gradient(@brand-color, @brand-color 4px, #ffffff 4px);
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border: 2px solid @brand-color;
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    &--left {
+      transform: none;
+    }
+  }
+}
+
+// ==============================DESKTOP=========================
+
+@media (min-width: @desktop-width) {
+  .slider {
+    background: transparent;
+    margin-right: 0;
+  }
+
+  .slider__indicator {
+    width: 428px;
+  }
+}

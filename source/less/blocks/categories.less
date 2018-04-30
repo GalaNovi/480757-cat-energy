@@ -1,97 +1,93 @@
-// .categiries {
-// }
+.categories {
+  margin-bottom: 17px;
+}
 
 .categories__list {
-  margin: 0;
-  padding: 0 20px;
-
-  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  .list-reset;
 }
 
 .categories__item {
-  padding-top: 30px;
-  padding-bottom: 19px;
-  margin-bottom: 20px;
-  background-color: @gray-background;
-}
-
-.categories__heading {
   position: relative;
 
-  margin: 0;
-  margin-left: 91px;
-  margin-bottom: 29px;
-  padding: 0;
+  padding: 30px 20px 19px;
+  margin-bottom: 20px;
+  background-color: @gray-background;
 
-  .font(24px, 37px, 400);
-
-  &::before {
-    position: absolute;
-
-    top: -6px;
-    left: -69px;
-
-    width: 50px;
-    height: 50px;
-
-    background: @brand-color;
-    border-radius: 50%;
-    content: "";
+  &:last-child {
+    margin-bottom: 0;
   }
+}
 
-  &--weight-loss::after {
+.categories__icon {
+  position: absolute;
+  top: 24px;
+  left: 22px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: @brand-color;
+  border-radius: 50%;
+
+  &--weight-loss::before {
     position: absolute;
-
-    top: -8px;
-    left: -61px;
+    top: -2px;
+    left: 8px;
 
     width: 35px;
     height: 49px;
 
     background: url("../img/icon-cat-slim.svg") no-repeat;
+
     content: "";
   }
 
-  &--set-of-weight::after {
+  &--set-of-weight::before {
     position: absolute;
-
-    top: 5px;
-    left: -78px;
+    top: 11px;
+    left: -9px;
 
     width: 67px;
     height: 28px;
 
     background: url("../img/icon-cat-pro.svg") no-repeat;
+
     content: "";
   }
 }
 
+.categories__heading {
+  .indent-reset;
+  margin-left: 71px;
+  margin-bottom: 29px;
+
+  .font(24px, 37px);
+}
+
 .categories__text {
-  margin: 0 20px;
+  .indent-reset;
   margin-bottom: 18px;
   padding-bottom: 22px;
 
-  font-family: "Arial", sans-serif;
-  .font(14px, 18px, 400);
+  .arial(14px, 18px);
   text-transform: none;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: @gray-line;
 }
 
 .categories__link {
-  position: relative;
-
-  margin-left: 20px;
-
   .font(16px, 16px);
 
-  &::before {
-    position: absolute;
-    top: 6px;
-    right: -45px;
-
+  &::after {
+    display: inline-block;
+    margin-left: 12px;
+    margin-bottom: 2px;
     width: 33px;
     height: 11px;
+
+    vertical-align: center;
 
     background: url("../img/icon-right-arrow-long.svg") no-repeat;
     background-position: -8px;
@@ -101,12 +97,118 @@
     content: "";
   }
 
-  &:hover::before {
+  &:hover::after {
     background-position: 0;
   }
 
   &:active,
-  &:active::before {
+  &:active::after {
     opacity: 0.3;
+  }
+}
+
+// =============================TABLET===========================
+
+@media (min-width: @tablet-width) {
+  .categories {
+    margin-bottom: 0;
+  }
+
+  .categories__list {
+    .indent-reset;
+  }
+
+  .categories__item {
+    margin-bottom: 30px;
+    padding: 75px 52px 60px;
+  }
+
+  .categories__icon {
+    top: 167px;
+    left: auto;
+    right: 136px;
+
+    transform: scale(4);
+
+    &--weight-loss::before {
+      top: -3px;
+      left: 7px;
+    }
+  }
+
+  .categories__heading {
+    margin-left: 0;
+    margin-bottom: 26px;
+
+    .font(36px, 37px);
+  }
+
+  .categories__text {
+    margin: 0 260px 34px 0;
+
+    .arial(16px, 24px);
+
+    border: none;
+  }
+
+  .categories__link {
+    margin-left: 0;
+
+    .font(20px, 20px);
+
+    &::after {
+      margin-left: 24px;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+// ============================DESKTOP===========================
+
+@media (min-width: @desktop-width) {
+  .categories {
+    margin-bottom: 28px;
+  }
+
+  .categories__item {
+    max-width: 570px;
+    padding: 76px 52px 59px;
+    margin-bottom: 0;
+    margin-right: 80px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .categories__icon {
+    top: 71px;
+    left: 77px;
+    right: auto;
+
+    transform: scale(2);
+  }
+
+  .categories__heading {
+    margin-left: 162px;
+    margin-bottom: 74px;
+
+    .font(36px, 37px);
+  }
+
+  .categories__text {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .categories__link {
+    margin-left: 0;
+
+    .font(20px, 20px);
+
+    &::after {
+      margin-left: 24px;
+      margin-bottom: 4px;
+    }
   }
 }

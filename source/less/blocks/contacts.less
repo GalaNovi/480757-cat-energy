@@ -1,10 +1,53 @@
-// .contacts {
-//
-// }
+.contacts {
+  margin: 0 -20px;
+}
 
 .contacts__map {
   position: relative;
+}
 
-  min-height: 362px;
-  background: url("../img/map-big.jpg") no-repeat -768px -194px;
+.contacts__interactive-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 362px;
+}
+
+.contacts__map-image {
+  display: block;
+  margin: auto;
+}
+
+// =========================TABLET====================
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    margin: 0 -30px;
+  }
+
+  .contacts__map {
+    height: 396px;
+  }
+
+  .contacts__interactive-map {
+    height: 396px;
+  }
+}
+
+// ========================DESKTOP===================
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    position: relative;
+  }
+
+  .contacts__map {
+    height: 399px;
+  }
+
+  .contacts__interactive-map {
+    height: 399px;
+  }
 }
