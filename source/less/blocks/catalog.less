@@ -354,19 +354,22 @@
 @media (min-width: @desktop-width) {
   .catalog {
     margin-bottom: 48px;
+    padding: 0 7.7%;
   }
 
   .catalog__additional {
-    margin-bottom: 85px;
+    margin-bottom: 75px;
   }
 
   .catalog__additional-heading {
+    padding-left: 7.7%;
+    padding-right: 7.7%;
     margin-bottom: 34px;
 
     &::after {
       flex-grow: 1;
       margin-left: 35px;
-      margin-right: -110px;
+      margin-right: -9.1%;
       margin-top: 12px;
       min-width: 20px;
       height: 3px;
@@ -378,7 +381,7 @@
     &::before {
       flex-grow: 0;
       margin-right: 40px;
-      margin-left: -110px;
+      margin-left: -9.1%;
       margin-top: 12px;
       width: 70px;
       height: 3px;
@@ -392,18 +395,20 @@
     &--additional {
       align-items: flex-start;
       .indent-reset;
-      margin-right: 80px;
-      width: 895px;
+      margin-right: 6.56%;
+      width: 73.4%;
     }
   }
 
   .catalog__item {
     margin-top: 142px;
-    margin-right: 80px;
-    width: 245px;
+    margin-right: 6.56%;
+    padding-left: 3.1%;
+    padding-right: 3.1%;
+    width: 20.08%;
 
     &:nth-child(even) {
-      margin-right: 80px;
+      margin-right: 6.56%;
     }
 
     &:nth-child(4n) {
@@ -416,7 +421,7 @@
       .indent-reset;
       padding-top: 13px;
       padding-bottom: 15px;
-      width: auto;
+      width: 100%;
 
       border: none;
       border-top: 1px solid #cdcdcd;
@@ -435,7 +440,8 @@
     &--additional {
       align-self: flex-end;
       margin-top: 13px;
-      width: 325px;
+      min-width: 165px;
+      width: 36.3%;
 
       text-align: left;
     }
@@ -446,7 +452,15 @@
     padding: 10px 0;
 
     &--additional {
-      width: 245px;
+      flex-grow: 1;
+      padding-left: 30px;
+      padding-right: 30px;
+      width: auto;
+      max-width: 245px;
     }
+  }
+
+  .catalog__more-button {
+    padding: 11px 15px 9px;
   }
 }
