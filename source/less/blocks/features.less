@@ -79,6 +79,10 @@
     .font(60px, 60px);
   }
 
+  .features__list {
+    counter-reset: myCounter;
+  }
+
   .features__item {
     .indent-reset;
     padding-top: 115px;
@@ -93,6 +97,18 @@
 
     &:last-child {
       margin-bottom: 87px;
+    }
+
+    &::before {
+      position: absolute;
+      top: -36px;
+      right: 5px;
+
+      .font(281px, 281px, 400, #f2f2f2);
+
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      z-index: -1;
     }
   }
 
@@ -130,6 +146,7 @@
     width: 20.08%;
     margin-right: 6.56%;
     margin-bottom: 0;
+    min-height: 235px;
 
     &:nth-child(2n) {
       margin-right: 6.56%;
