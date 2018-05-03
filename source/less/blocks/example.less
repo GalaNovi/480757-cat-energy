@@ -1,6 +1,6 @@
 .example {
-  padding: 17px 20px 36px;
-  margin: 0 -20px;
+  padding-top: 17px;
+  padding-bottom: 36px;
   background-color: @gray-background;
 }
 
@@ -42,8 +42,9 @@
 @media (min-width: @tablet-width) {
   .example {
     .indent-reset;
-    margin: -28px -30px 0;
-    padding: 43px 30px 0;
+    margin-top: -28px;
+    padding: 0;
+    padding-top: 43px;
 
     border-top: @gray-line;
     background-color: #ffffff;
@@ -93,15 +94,21 @@
 @media (min-width: @desktop-width) {
   .example {
     margin: 0;
-    padding: 78px 7.7% 0;
+    padding: 0;
+    padding-top: 78px;
 
     background: linear-gradient(to bottom, #ffffff, #ffffff 213px, @gray-background 213px);
     border-top: none;
   }
 
+  .example__heading {
+    margin-left: 7.7%;
+  }
+
   .example__columns {
     display: flex;
     justify-content: space-between;
+    margin-left: 7.7%;
   }
 
   .example__result-wrapper {
@@ -139,5 +146,6 @@
 
   .example__slider {
     margin-top: -158px;
+    margin-right: 7.7%;
   }
 }
