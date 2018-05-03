@@ -1,4 +1,5 @@
 .result-list {
+  margin: 0 auto 4px;
   padding: 0;
   padding-top: 5px;
   width: 280px;
@@ -47,6 +48,8 @@
 @media (min-width: @tablet-width) {
   .result-list {
     display: flex;
+    margin: 0;
+    margin-bottom: 4px;
     width: auto;
     max-width: 500px;
   }
@@ -76,14 +79,16 @@
   }
 
   .result-list__description {
+    position: static;
+    bottom: auto;
+    left: auto;
     display: inline-block;
     padding: 0 9px;
     width: auto;
     max-width: 146px;
-    bottom: auto;
-    left: auto;
 
     .font(14px, 14px);
+    vertical-align: top;
 
     background-color: #ffffff;
   }
@@ -92,6 +97,10 @@
 // ==========================DESKTOP==============================
 
 @media (min-width: @desktop-width) {
+  .result-list {
+    margin-bottom: 14px;
+  }
+
   .result-list__description {
     background-color: @gray-background;
   }

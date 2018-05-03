@@ -10,7 +10,7 @@
   padding-top: 26px;
 
   min-height: 305px;
-  background: @brand-color url("../img/index-background-mobile@1x.jpg") no-repeat center top;
+  background: @brand-color url("../img/index-background-mobile@1x.jpg") no-repeat center;
   background-size: 100%;
 }
 
@@ -90,6 +90,23 @@
 @media (min-width: @desktop-width) {
   .food-program {
     margin-bottom: 132px;
+    padding: 0 7.7%;
+    min-height: 521px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 50%;
+      height: 696px;
+
+      background: @brand-color url("../img/index-background-desktop.jpg") no-repeat center;
+      background-size: cover;
+
+      content: "";
+      z-index: -1;
+    }
   }
 
   .food-program__heading-wrapper {

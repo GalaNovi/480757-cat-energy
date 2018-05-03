@@ -26,6 +26,7 @@
   margin-bottom: 16px;
   padding: 5px 0;
   padding-left: 80px;
+  min-height: 64px;
 
   &:last-child {
     margin-bottom: 0;
@@ -79,15 +80,15 @@
   }
 
   .features__list {
-    width: 708px;
+    counter-reset: myCounter;
   }
 
   .features__item {
     .indent-reset;
     padding-top: 115px;
-    margin-right: 133px;
+    margin-right: 18.9%;
     margin-bottom: 87px;
-    width: 250px;
+    width: 35.3%;
     min-height: 230px;
 
     &:nth-child(even) {
@@ -96,6 +97,18 @@
 
     &:last-child {
       margin-bottom: 87px;
+    }
+
+    &::before {
+      position: absolute;
+      top: -36px;
+      right: 5px;
+
+      .font(281px, 281px, 400, #f2f2f2);
+
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      z-index: -1;
     }
   }
 
@@ -121,6 +134,7 @@
 
 @media (min-width: @desktop-width) {
   .features {
+    margin: 0 7.7%;
     border: none;
   }
 
@@ -129,12 +143,13 @@
   }
 
   .features__item {
-    width: 245px;
-    margin-right: 80px;
+    width: 20.08%;
+    margin-right: 6.56%;
     margin-bottom: 0;
+    min-height: 235px;
 
     &:nth-child(2n) {
-      margin-right: 80px;
+      margin-right: 6.56%;
     }
 
     &:nth-child(4n) {

@@ -11,17 +11,20 @@
 
   text-align: center;
 
-  background: @brand-color url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+  background: @brand-color url("../img/gift-photo-mobile@1x.jpg") no-repeat center;
+  background-size: 100%;
 
   &::before {
     position: absolute;
     top: 65px;
-    left: 113px;
+    left: 50%;
 
     width: 55px;
     height: 60px;
 
     background: url("../img/icon-gift.svg") no-repeat;
+
+    transform: translateX(-50%);
 
     content: "";
   }
@@ -47,7 +50,7 @@
 
   .offer__link {
     display: block;
-    padding: 72px 72px 68px 423px;
+    padding: 72px 72px 68px 59.8%;
     min-height: 200px;
 
     text-align: left;
@@ -55,7 +58,7 @@
     background: @brand-color url("../img/gift-photo-mobile@1x.jpg") no-repeat;
 
     &::before {
-      left: 90px;
+      left: 16.7%;
     }
 
     .offer__text {
@@ -77,7 +80,7 @@
     text-align: center;
 
     &::before {
-      left: 95px;
+      left: 50%;
     }
   }
 
