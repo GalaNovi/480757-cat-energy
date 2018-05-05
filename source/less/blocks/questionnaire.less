@@ -27,10 +27,11 @@
 @media (min-width: @tablet-width) {
   .questionnaire {
     margin-bottom: 18px;
-    padding: 30px 37px 0 40px;
+    padding-top: 30px;
   }
 
   .questionnaire__heading {
+    margin: 0 40px;
     margin-bottom: 38px;
     width: 350px;
 
@@ -55,12 +56,17 @@
 @media (min-width: @desktop-width) {
   .questionnaire {
     margin-bottom: 10px;
-    padding: 0 7.7%;
+    padding: 0;
     padding-top: 32px;
   }
 
+  .questionnaire__heading {
+    margin: 0;
+  }
+
   .questionnaire__button {
+    padding: 16px 30px 16px 34px;
     margin-right: 80px;
-    min-width: 570px;
+    width: 46.7%;
   }
 }
