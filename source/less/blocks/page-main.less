@@ -1,5 +1,7 @@
 .page-main {
-  border-top: @gray-line;
+  &--inner-page {
+    border-top: @gray-line;
+  }
 }
 
 .page-main__heading {
@@ -19,7 +21,7 @@
 
 @media (min-width: @tablet-width) {
   .page-main {
-    padding-top: 47px;
+    padding-top: 57px;
     margin-bottom: 0;
 
     border-top: none;
@@ -30,8 +32,6 @@
     margin-bottom: 25px;
 
     .font(60px, 60px);
-
-    border: none;
   }
 }
 
@@ -39,7 +39,7 @@
 
 @media (min-width: @desktop-width) {
   .page-main {
-    padding-top: 65px;
+    padding-top: 74px;
   }
 
   .page-main__heading {

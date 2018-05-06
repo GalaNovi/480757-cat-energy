@@ -16,6 +16,10 @@
   min-height: 305px;
   background: @brand-color url("../img/index-background-mobile@1x.jpg") no-repeat center;
   background-size: 100%;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .food-program__heading {
@@ -104,8 +108,12 @@
       width: 50%;
       height: 696px;
 
-      background: @brand-color url("../img/index-background-desktop.jpg") no-repeat center;
+      background: @brand-color url("../img/index-background-desktop@1x.jpg") no-repeat center;
       background-size: cover;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
 
       content: "";
       z-index: -1;
