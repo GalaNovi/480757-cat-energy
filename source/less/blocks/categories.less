@@ -185,23 +185,27 @@
   }
 
   .categories__list {
-    padding: 0 7.7%;
+    margin: 0 -40px;
   }
 
   .categories__item {
-    max-width: 46.72%;
-    padding: 76px 52px 59px;
-    margin-bottom: 0;
-    margin-right: 6.56%;
+    display: flex;
+    .indent-reset;
+    width: 50%;
 
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
+    background-color: transparent;
+  }
+
+  .categories__item-wrapper {
+    margin: 0 40px;
+    padding: 76px 52px 59px;
+
+    background-color: @gray-background;
   }
 
   .categories__icon {
     top: 47px;
-    left: 52px;
+    left: 92px;
     right: auto;
 
     width: 100px;

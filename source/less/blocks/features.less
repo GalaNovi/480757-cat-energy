@@ -41,22 +41,55 @@
   width: 60px;
   height: 60px;
 
-  &--leaf {
-    background: @brand-color url("../img/advantage-leaf@1x.png") no-repeat center;
+  background-color: @brand-color;
+
+  &::before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    width: 50px;
+    height: 50px;
+
+    background-size: 100%;
+
+    content: "";
   }
 
-  &--powder {
-    background: @brand-color url("../img/advantage-powder@1x.png") no-repeat center;
-    background-position: 5px 4px;
+  &--leaf::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 
-  &--tableware {
-    background: @brand-color url("../img/advantage-dining@1x.png") no-repeat center;
-    background-position: 4px 5px;
+  &--powder::before {
+    top: 4px;
+
+    background-image: url("../img/advantage-powder@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
   }
 
-  &--clock {
-    background: @brand-color url("../img/advantage-clock@1x.png") no-repeat center;
+  &--tableware::before {
+    left: 4px;
+
+    background-image: url("../img/advantage-dining@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
+  }
+
+  &--clock::before {
+    background-image: url("../img/advantage-clock@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
 }
 
@@ -80,20 +113,18 @@
   }
 
   .features__list {
+    margin: 0 -30px;
     counter-reset: myCounter;
   }
 
   .features__item {
     .indent-reset;
+    padding: 0 30px;
     padding-top: 115px;
-    margin-right: 18.9%;
+    padding-right: 100px;
     margin-bottom: 87px;
-    width: 35.3%;
+    width: 50%;
     min-height: 230px;
-
-    &:nth-child(even) {
-      margin-right: 0;
-    }
 
     &:last-child {
       margin-bottom: 87px;
@@ -102,7 +133,7 @@
     &::before {
       position: absolute;
       top: -36px;
-      right: 5px;
+      right: 107px;
 
       .font(281px, 281px, 400, #f2f2f2);
 
@@ -110,18 +141,22 @@
       content: counter(myCounter);
       z-index: -1;
     }
+
+    &--first {
+      &::before {
+        right: 125px;
+      }
+    }
   }
 
   .features__icon {
+    left: 30px;
     width: 80px;
     height: 80px;
 
-    &--powder {
-      background-position: center;
-    }
-
-    &--tableware {
-      background-position: center;
+    &::before {
+      top: 15px;
+      left: 15px;
     }
   }
 
@@ -134,30 +169,35 @@
 
 @media (min-width: @desktop-width) {
   .features {
-    margin: 0 7.7%;
     border: none;
   }
 
   .features__list {
-    width: auto;
+    margin: 0 -40px;
   }
 
   .features__item {
-    width: 20.08%;
-    margin-right: 6.56%;
-    margin-bottom: 0;
-    min-height: 235px;
-
-    &:nth-child(2n) {
-      margin-right: 6.56%;
-    }
-
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
+    .indent-reset;
+    margin-bottom: 83px;
+    padding: 115px 20px 0 40px;
+    width: 25%;
 
     &:last-child {
-      margin-bottom: 0;
+      margin-bottom: 83px;
     }
+
+    &::before {
+      right: 38px;
+    }
+
+    &--first {
+      &::before {
+        right: 55px;
+      }
+    }
+  }
+
+  .features__icon {
+    left: 40px;
   }
 }

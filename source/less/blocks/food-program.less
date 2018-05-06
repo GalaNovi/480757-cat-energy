@@ -1,7 +1,11 @@
 .food-program {
+  margin-bottom: 22px;
+}
+
+.food-program .container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 22px;
+
   text-align: center;
 }
 
@@ -12,6 +16,10 @@
   min-height: 305px;
   background: @brand-color url("../img/index-background-mobile@1x.jpg") no-repeat center;
   background-size: 100%;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .food-program__heading {
@@ -49,7 +57,7 @@
 
   .food-program__heading-wrapper {
     .indent-reset;
-    padding: 47px 87px 0;
+    padding: 0 87px;
     margin-bottom: 47px;
     min-height: auto;
     background: none;
@@ -89,8 +97,7 @@
 
 @media (min-width: @desktop-width) {
   .food-program {
-    margin-bottom: 132px;
-    padding: 0 7.7%;
+    margin-bottom: 67px;
     min-height: 521px;
 
     &::before {
@@ -101,8 +108,12 @@
       width: 50%;
       height: 696px;
 
-      background: @brand-color url("../img/index-background-desktop.jpg") no-repeat center;
+      background: @brand-color url("../img/index-background-desktop@1x.jpg") no-repeat center;
       background-size: cover;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
 
       content: "";
       z-index: -1;
@@ -111,7 +122,7 @@
 
   .food-program__heading-wrapper {
     .indent-reset;
-    padding: 99px 80px 0;
+    padding: 34px 80px 0;
     margin-bottom: 52px;
   }
 

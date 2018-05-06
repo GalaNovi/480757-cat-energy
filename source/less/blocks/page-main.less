@@ -1,15 +1,19 @@
+.page-main {
+  &--inner-page {
+    border-top: @gray-line;
+  }
+}
+
 .page-main__heading {
   .indent-reset;
-  padding: 15px 20px 28px;
-  margin: 0 -20px;
+  margin-top: 15px;
+  margin-bottom: 28px;
 
   .font(36px, 60px);
   text-transform: none;
 
-  border-top: @gray-line;
-
   &--form {
-    padding-bottom: 26px;
+    margin-bottom: 26px;
   }
 }
 
@@ -17,16 +21,17 @@
 
 @media (min-width: @tablet-width) {
   .page-main {
+    padding-top: 57px;
     margin-bottom: 0;
+
+    border-top: none;
   }
 
   .page-main__heading {
-    padding: 47px 0 25px;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 25px;
 
     .font(60px, 60px);
-
-    border: none;
   }
 }
 
@@ -34,16 +39,14 @@
 
 @media (min-width: @desktop-width) {
   .page-main {
-    margin-bottom: 0;
+    padding-top: 74px;
   }
 
   .page-main__heading {
-    padding: 65px 7.7% 23px;
+    margin-bottom: 23px;
   }
 
   .page-main__columns {
     display: flex;
-    align-items: flex-start;
-    padding: 12px 7.63%;
   }
 }
