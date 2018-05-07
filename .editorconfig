@@ -22,9 +22,5 @@ trim_trailing_whitespace = true
 trim_trailing_whitespace = false
 
 [picturefill.js]
-charset = none
-end_of_line = none
-indent_size = none
-indent_style = none
-insert_final_newline = none
-trim_trailing_whitespace = none
+insert_final_newline = false
+trim_trailing_whitespace = false
