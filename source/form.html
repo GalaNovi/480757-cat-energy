@@ -39,7 +39,9 @@
       <section class="questionnaire">
         <div class="container">
           <h2 class="questionnaire__heading">Заполните анкету и мы подберем программу питания для вашего кота</h2>
-          <form class="questionnaire__form form" action="https://echo.htmlacademy.ru" method="post">
+        </div>
+        <form class="questionnaire__form form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="container container--form">
             <div class="form__row-wrapper">
               <fieldset class="form__fieldset">
                 <p class="form__item">
@@ -72,12 +74,14 @@
                 </div>
               </fieldset>
             </div>
-            <fieldset class="form__fieldset form__fieldset--contact-info">
-              <h3 class="form__section-title">
-                <div class="container">
-                  <span class="form__heading-text">Контактные данные<br class="break"> (владельца кота)</span>
-                </div>
-              </h3>
+          </div>
+          <fieldset class="form__fieldset form__fieldset--contact-info">
+            <h3 class="form__section-title">
+              <div class="container">
+                <span class="form__heading-text">Контактные данные<br class="break"> (владельца кота)</span>
+              </div>
+            </h3>
+            <div class="container">
               <div class="form__row-wrapper form__row-wrapper--contact-info">
                 <p class="form__item">
                   <label class="form__label" for="email-field">E-mail:*</label>
@@ -88,24 +92,28 @@
                   <input class="form__field form__field--phone" id="phone-field" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
                 </p>
               </div>
-            </fieldset>
-            <fieldset class="form__fieldset form__fieldset--comment">
-              <h3 class="form__section-title">
-                <div class="container">
-                  <span class="form__heading-text">Комментарий</span>
-                </div>
-              </h3>
-              <p class="form__item">
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--comment">
+            <h3 class="form__section-title">
+              <div class="container">
+                <span class="form__heading-text">Комментарий</span>
+              </div>
+            </h3>
+            <div class="container">
+              <p class="form__item form__item--comment">
                 <label class="visually-hidden" for="comment-field">Поле для комментария</label>
                 <textarea class="form__field form__field--comment" id="comment-field" name="comment" rows="7" cols="30" placeholder="Расскажите обо всех повадках кота"></textarea>
               </p>
-            </fieldset>
-            <fieldset class="form__fieldset form__fieldset--additional">
-              <h3 class="form__section-title form__section-title--additional">
-                <div class="container">
-                  <span class="form__heading-text">Дополнительно</span>
-                </div>
-              </h3>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--additional">
+            <h3 class="form__section-title form__section-title--additional">
+              <div class="container">
+                <span class="form__heading-text">Дополнительно</span>
+              </div>
+            </h3>
+            <div class="container">
               <div class="form__checkbox-wrapper">
                 <p class="form__item form__item--checkbox">
                   <input class="form__checkbox visually-hidden" id="sweetener" type="checkbox" name="sweetener" value="yes" checked>
@@ -124,13 +132,15 @@
                   <label class="form__label form__label--for-checkbox" for="vitamins">Витамины</label>
                 </p>
               </div>
-            </fieldset>
+            </div>
+          </fieldset>
+          <div class="container">
             <div class="form__row-wrapper form__row-wrapper--button">
               <button class="questionnaire__button button" type="submit">Отправить заявку</button>
               <small class="questionnaire__specification">* — Обязательные поля</small>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </section>
     </main>
     <footer class="page-footer">

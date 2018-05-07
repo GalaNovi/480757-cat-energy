@@ -1,7 +1,4 @@
 .form {
-  display: flex;
-  flex-direction: column;
-
   padding-bottom: 32px;
 }
 
@@ -198,7 +195,6 @@
 .form__section-title {
   position: relative;
   .indent-reset;
-  margin: 0 -20px;
   margin-bottom: 34px;
   text-transform: none;
   .font(24px, 24px);
@@ -240,8 +236,6 @@
   .form {
     padding-top: 28px;
     padding-bottom: 34px;
-    padding-left: 40px;
-    padding-right: 37px;
   }
 
   .form__fieldset {
@@ -277,13 +271,15 @@
     margin-bottom: 20px;
 
     &--checkbox {
-      min-width: 285px;
-      margin-right: 60px;
+      flex-grow: 1;
+      width: 40.1%;
+      margin: 0 30px;
       margin-bottom: 34px;
+    }
 
-      &:nth-child(even) {
-        margin-right: 0;
-      }
+    &--comment {
+      padding-left: 40px;
+      padding-right: 37px;
     }
   }
 
@@ -352,8 +348,6 @@
   }
 
   .form__section-title {
-    margin-left: -70px;
-    margin-right: -67px;
     margin-bottom: 75px;
     .font(36px, 36px);
 
@@ -372,7 +366,8 @@
   }
 
   .form__checkbox-wrapper {
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 0 11px;
   }
 
   .form__section-title .break {
@@ -380,12 +375,13 @@
   }
 
   .form__row-wrapper {
+    padding-left: 41px;
+    padding-right: 37px;
+
     &--button {
       flex-direction: row;
-      align-self: center;
       align-items: flex-start;
-      width: 631px;
-      margin-left: 3px;
+      margin: 0 -30px;
     }
   }
 }
@@ -396,7 +392,7 @@
   .form {
     padding: 0;
     padding-top: 66px;
-    padding-bottom: 30px;
+    padding-bottom: 51px;
   }
 
   .form__fieldset {
@@ -410,7 +406,7 @@
     }
 
     &--additional {
-      margin-bottom: 25px;
+      margin-bottom: 59px;
     }
   }
 
@@ -429,9 +425,13 @@
     &--checkbox {
       min-width: auto;
       width: 25%;
-      margin-right: 0;
+      margin: 0;
       padding: 0 40px;
       padding-top: 5px;
+    }
+
+    &--comment {
+      padding: 0;
     }
   }
 
@@ -452,8 +452,6 @@
   }
 
   .form__section-title {
-    margin-left: -110px;
-    margin-right: -110px;
     margin-bottom: 75px;
     .font(36px, 36px);
 
@@ -474,11 +472,12 @@
     align-items: flex-start;
     margin: 0 -40px;
     margin-bottom: 21px;
+    padding: 0;
 
     &--button {
       justify-content: flex-start;
       align-self: flex-start;
-      margin-left: 0;
+      margin: 0;
       width: 100%;
     }
   }
@@ -487,5 +486,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin: 0 -40px;
+    padding: 0;
   }
 }
