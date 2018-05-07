@@ -35,6 +35,7 @@
 }
 
 .form__item {
+  position: relative;
   display: flex;
   align-items: center;
 
@@ -68,6 +69,7 @@
   &--email,
   &--phone {
     position: relative;
+    padding-right: 40px;
   }
 
   &--comment {
@@ -85,8 +87,18 @@
     outline: 2px solid rgba(68, 68, 68, 1);
   }
 
+  &:active + .form__icon,
+  &:focus + .form__icon {
+    fill: @brand-color;
+  }
+
   &:invalid {
     outline-color: rgba(255, 130, 130, 1);
+  }
+
+  &:active:invalid + .form__icon,
+  &:focus:invalid + .form__icon {
+    fill: rgba(255, 130, 130, 1);
   }
 }
 
@@ -230,6 +242,19 @@
   margin-bottom: 21px;
 }
 
+.form__icon {
+  position: absolute;
+  fill: #222222;
+
+  &--email {
+    right: 16px;
+  }
+
+  &--phone {
+    right: 13px;
+  }
+}
+
 // ===========================TABLET==========================
 
 @media (min-width: @tablet-width) {
@@ -345,6 +370,11 @@
       padding-top: 13px;
       min-height: 175px;
     }
+
+    &--email,
+    &--phone {
+      padding-right: 50px;
+    }
   }
 
   .form__section-title {
@@ -382,6 +412,16 @@
       flex-direction: row;
       align-items: flex-start;
       margin: 0 -30px;
+    }
+  }
+
+  .form__icon {
+    &--email {
+      right: 20px;
+    }
+
+    &--phone {
+      right: 16px;
     }
   }
 }
@@ -487,5 +527,15 @@
     align-items: flex-start;
     margin: 0 -40px;
     padding: 0;
+  }
+
+  .form__icon {
+    &--email {
+      right: 60px;
+    }
+
+    &--phone {
+      right: 59px;
+    }
   }
 }
