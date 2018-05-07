@@ -1,4 +1,4 @@
-/* stylelint-disable */
+/* eslint-disable */
 
 /*! picturefill - v3.0.2 - 2016-02-12
  * https://scottjehl.github.io/picturefill/
