@@ -50,22 +50,28 @@
 .catalog__text-wrapper {
   width: 140px;
   order: 1;
-}
 
-.catalog__text-wrapper a {
-  display: inline-block;
-  margin: 22px 0 12px;
-
-  vertical-align: top;
+  &--more {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .catalog__heading {
   .indent-reset;
-  .font(16px, 20px, 400);
 
   &--additional {
     margin-bottom: 10px;
+    .font(16px, 20px, 400);
   }
+}
+
+.catalog__heading-link {
+  display: inline-block;
+  margin: 22px 0 12px;
+
+  vertical-align: top;
+  .font(16px, 20px, 400);
 }
 
 .catalog__weight-break {
@@ -77,10 +83,13 @@
   line-height: 0;
 }
 
-.catalog__button {
-  order: 2;
+.catalog__button-wrapper {
   flex-grow: 1;
   width: 100%;
+  order: 2;
+}
+
+.catalog__button {
   padding: 10px 0;
 }
 
@@ -149,7 +158,7 @@
 }
 
 .catalog__additional {
-  padding-top: 28px;
+  padding-top: 8px;
 }
 
 .catalog__additional-heading {
@@ -193,6 +202,7 @@
   .catalog__list {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
     flex-wrap: wrap;
     margin: 0 -30px;
 
@@ -208,6 +218,7 @@
   }
 
   .catalog__item {
+    display: flex;
     .indent-reset;
     padding-top: 140px;
     width: 50%;
@@ -230,20 +241,18 @@
   }
 
   .catalog__item-wrapper {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-start;
 
     margin: 0 30px;
-    padding: 0 37px 40px 38px;
+    padding: 0;
+    padding-bottom: 40px;
     min-height: 431px;
 
     border-bottom: none;
     background-color: @gray-background;
 
     &--more {
-      justify-content: flex-start;
-      align-items: center;
+      justify-content: center;
 
       background-color: transparent;
       border: 1px solid rgba(205, 205, 205, 0.5);
@@ -255,22 +264,46 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 34px;
+    padding-left: 38px;
+    padding-right: 37px;
     width: 100%;
 
     order: 2;
+
+    &--more {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 84px;
+    }
+  }
+
+  .catalog__button-wrapper {
+    flex-grow: 1;
+    padding-left: 38px;
+    padding-right: 37px;
+
+    order: 3;
   }
 
   .catalog__heading {
-    margin-bottom: 6px;
+    margin-bottom: 18px;
 
-    .font(20px, 20px);
     text-align: center;
+
+    &--additional {
+      .font(20px, 20px);
+    }
+  }
+
+  .catalog__heading-link {
+    .indent-reset;
+    .font(20px, 20px);
   }
 
   .catalog__image-link {
     align-self: center;
     margin-top: -46px;
-    margin-bottom: auto;
+    margin-bottom: 36px;
     width: 324px;
 
     text-align: center;
@@ -289,7 +322,6 @@
   }
 
   .catalog__button {
-    flex-grow: 0;
     padding: 10px 30px;
 
     &--additional {
@@ -299,7 +331,7 @@
 
   .catalog__cross {
     margin-top: 54px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     width: 100%;
     height: 60px;
 
@@ -324,7 +356,7 @@
 
   .catalog__more-text {
     max-width: 180px;
-    margin-bottom: auto;
+    margin-bottom: 0;
 
     .font(16px, 19px);
     text-align: center;
@@ -332,14 +364,16 @@
 
   .catalog__more-button {
     flex-grow: 0;
-    align-self: stretch;
+    align-self: flex-end;
   }
 
   .catalog__additional {
+    padding-top: 26px;
     margin-bottom: 76px;
   }
 
   .catalog__additional-heading {
+    margin-top: 0;
     margin-bottom: 33px;
     .font(36px, 36px);
 
@@ -362,7 +396,7 @@
   }
 
   .catalog__list {
-    margin: 0 -40px;
+    margin: 0 -3.3%;
 
     &--additional {
       flex-direction: column;
@@ -395,21 +429,36 @@
 
   .catalog__item-wrapper {
     margin: 0 12.31%;
-    padding: 0 11.4% 12.3% 11.7%;
+  }
+
+  .catalog__image-link {
+    width: 100%;
+    height: auto;
+  }
+
+  .catalog__text-wrapper {
+    padding-left: 15.5%;
+    padding-right: 15.5%;
   }
 
   .catalog__heading {
     &--additional {
-      margin-top: 5px;
+      .indent-reset;
       width: 36.3%;
 
       text-align: left;
     }
   }
 
+  .catalog__button-wrapper {
+    align-self: flex-end;
+    padding-left: 15.5%;
+    padding-right: 15.5%;
+  }
+
   .catalog__button {
     flex-grow: 0;
-    padding: 10px 0;
+    padding: 10px 20px;
 
     &--additional {
       flex-grow: 1;
@@ -435,6 +484,6 @@
   }
 
   .catalog__more-button {
-    padding: 11px 15px 9px;
+    padding: 11px 10px 9px;
   }
 }
