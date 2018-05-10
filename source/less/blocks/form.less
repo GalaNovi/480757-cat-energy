@@ -54,16 +54,29 @@
 .form__field {
   flex-grow: 1;
   margin: 0;
-  padding: 10px 15px 9px;
+  padding: 11px 15px 10px;
+  width: 100%;
+  min-width: 50px;
 
   .font(16px, 18px, 400, @text-black);
   line-height: normal;
 
-  border: 1px solid rgba(205, 205, 205, 0.5);
+  border: none;
+  box-shadow: inset 0 0 0 1px rgba(205, 205, 205, 0.5);
 
   &::placeholder {
     text-transform: uppercase;
     .font(16px, 18px, 400, #444444);
+  }
+
+  &:-ms-input-placeholder {
+    text-transform: uppercase;
+    color: #444444;
+  }
+
+  &::-moz-placeholder {
+    line-height: normal;
+    opacity: 1;
   }
 
   &--email,
@@ -79,12 +92,13 @@
   }
 
   &:hover {
-    border-color: rgba(205, 205, 205, 1);
+    box-shadow: inset 0 0 0 1px rgba(205, 205, 205, 1);
   }
 
   &:active,
   &:focus {
-    outline: 2px solid rgba(68, 68, 68, 1);
+    box-shadow: inset 0 0 0 2px rgba(68, 68, 68, 1);
+    outline: none;
   }
 
   &:active + .form__icon,
@@ -92,8 +106,9 @@
     fill: @brand-color;
   }
 
-  &:invalid {
-    outline-color: rgba(255, 130, 130, 1);
+  &:active:invalid,
+  &:focus:invalid {
+    box-shadow: inset 0 0 0 2px rgba(255, 130, 130, 1);
   }
 
   &:active:invalid + .form__icon,
@@ -103,6 +118,7 @@
 }
 
 .form__label {
+  flex-shrink: 0;
   position: relative;
 
   margin-right: 12px;
@@ -244,7 +260,11 @@
 
 .form__icon {
   position: absolute;
+  top: 50%;
+
   fill: #222222;
+
+  transform: translateY(-50%);
 
   &--email {
     right: 16px;
@@ -360,14 +380,24 @@
 
   .form__field {
     padding: 10px 18px;
+    min-height: 52px;
     .font(20px, 20px, 400, @text-black);
 
     &::placeholder {
-      .font(20px, 25px);
+      .font(20px, 20px, 400, #444444);
+    }
+
+    &:-ms-input-placeholder {
+      text-transform: uppercase;
+      .font(20px, 20px, 400, #444444);
+    }
+
+    &::-moz-placeholder {
+      line-height: normal;
     }
 
     &--comment {
-      padding-top: 13px;
+      padding-top: 15px;
       min-height: 175px;
     }
 
@@ -437,7 +467,7 @@
 
   .form__fieldset {
     &--contact-info {
-      padding-top: 2px;
+      padding-top: 29px;
       margin-bottom: 22px;
     }
 
@@ -459,6 +489,11 @@
   .form__row-wrapper--contact-info .form__item {
     width: 50%;
     padding: 0 40px;
+  }
+
+  .form__radio-wrapper {
+    padding-bottom: 2px;
+    margin-bottom: 0;
   }
 
   .form__item {
@@ -509,7 +544,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
     margin: 0 -40px;
     margin-bottom: 21px;
     padding: 0;

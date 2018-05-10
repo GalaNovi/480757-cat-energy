@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="container container--index">
         <a class="page-header__logo page-header__logo--disabled">
@@ -178,7 +181,7 @@
         </div>
         <div class="contacts__map">
           <h3 class="visually-hidden">Как нас найти</h3>
-          <iframe class="contacts__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.2245392042514!2d30.32197825989839!3d59.938757584924396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1524821151591" style="border:0" allowfullscreen></iframe>
+          <iframe class="contacts__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.2245392042514!2d30.32197825989839!3d59.938757584924396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1524821151591" style="border:0" allowfullscreen=""></iframe>
           <picture class="contacts__map-image">
             <source type="image/webp" media="(min-width: 1100px)" srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
@@ -201,21 +204,21 @@
               <li class="socials-list__item">
                 <a class="socials-list__link socials-list__link--vkontakte" href="#"><span class="visually-hidden">Вконтакте</span>
                   <svg class="social-list__icon" width="22" height="19" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+                    <use xlink:href="#inline-icon-vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials-list__item">
                 <a class="socials-list__link socials-list__link--instagram" href="#"><span class="visually-hidden">Инстаграм</span>
                   <svg class="social-list__icon" width="16" height="16" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                    <use xlink:href="#inline-icon-insta"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials-list__item">
                 <a class="socials-list__link socials-list__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span>
                   <svg class="social-list__icon" width="10" height="19" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                    <use xlink:href="#inline-icon-fb"></use>
                   </svg>
                 </a>
               </li>
@@ -223,9 +226,11 @@
           </div>
           <p class="copyrights">
             <a class="copyrights__link" href="https://up.htmlacademy.ru/adaptive/14">HTML Academy</a>
-            <svg class="copyrights__icon" width="27" height="34" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
-            </svg>
+            <a class="copyrights__link-icon" href="https://up.htmlacademy.ru/adaptive/14">
+              <svg class="copyrights__icon" width="27" height="34" aria-hidden="true">
+                <use xlink:href="#inline-icon-htmlacademy"></use>
+              </svg>
+            </a>
           </p>
         </div>
       </div>

@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="container">
         <a class="page-header__logo" href="index.html">
@@ -46,11 +49,11 @@
               <fieldset class="form__fieldset">
                 <p class="form__item">
                   <label class="form__label" for="name-field">Имя:*</label>
-                  <input class="form__field" id="name-field" type="text" name="name" placeholder="Барсик" required>
+                  <input class="form__field" id="name-field" type="text" name="name" placeholder="Барсик" required="">
                 </p>
                 <p class="form__item">
                   <label class="form__label" for="weight-field">Вес (кг):*</label>
-                  <input class="form__field" id="weight-field" type="text" name="weight" placeholder="7" required>
+                  <input class="form__field" id="weight-field" type="text" name="weight" placeholder="7" required="">
                 </p>
                 <p class="form__item">
                   <label class="form__label" for="age-field">Возраст (лет):</label>
@@ -60,7 +63,7 @@
               <fieldset class="form__fieldset form__fieldset--border">
                 <div class="form__radio-wrapper">
                   <p class="form__item">
-                    <input class="form__radio visually-hidden" id="weight-loss" type="radio" name="program-option" value="weight-loss" checked>
+                    <input class="form__radio visually-hidden" id="weight-loss" type="radio" name="program-option" value="weight-loss" checked="">
                     <label class="form__label form__label--for-radio" for="weight-loss">Похудение</label>
                   </p>
                   <p class="form__item">
@@ -85,16 +88,16 @@
               <div class="form__row-wrapper form__row-wrapper--contact-info">
                 <p class="form__item">
                   <label class="form__label" for="email-field">E-mail:*</label>
-                  <input class="form__field form__field--email" id="email-field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                  <input class="form__field form__field--email" id="email-field" type="email" name="email" placeholder="kuklachev@gmail.com" required="">
                   <svg class="form__icon form__icon--email" width="17" height="13" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-email"></use>
+                    <use xlink:href="#inline-icon-mail"></use>
                   </svg>
                 </p>
                 <p class="form__item">
                   <label class="form__label" for="phone-field">Телефон:*</label>
-                  <input class="form__field form__field--phone" id="phone-field" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                  <input class="form__field form__field--phone" id="phone-field" type="tel" name="phone" placeholder="8 (960) 900-60-90" required="">
                   <svg class="form__icon form__icon--phone" width="20" height="20" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                    <use xlink:href="#inline-icon-phone"></use>
                   </svg>
                 </p>
               </div>
@@ -122,7 +125,7 @@
             <div class="container">
               <div class="form__checkbox-wrapper">
                 <p class="form__item form__item--checkbox">
-                  <input class="form__checkbox visually-hidden" id="sweetener" type="checkbox" name="sweetener" value="yes" checked>
+                  <input class="form__checkbox visually-hidden" id="sweetener" type="checkbox" name="sweetener" value="yes" checked="">
                     <label class="form__label form__label--for-checkbox" for="sweetener"><span class="form__checkbox-text">Сахарозаменитель</span></label>
                 </p>
                 <p class="form__item form__item--checkbox">
@@ -153,14 +156,14 @@
       <section class="contacts">
         <h2 class="visually-hidden">Как нас найти</h2>
         <div class="container">
-          <div class="for-dealers">
+          <div class="for-dealers for-dealers--inner-page">
             <b class="for-dealers__heading">Приглашаем к сотрудничеству дилеров!</b>
             <p class="for-dealers__address">ул. Большая<br> Конюшенная, д. 19/8<br> <span class="for-dealers__city">Санкт-Петербург</span></p>
           </div>
         </div>
         <div class="contacts__map">
           <h3 class="visually-hidden">Как нас найти</h3>
-          <iframe class="contacts__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.2245392042514!2d30.32197825989839!3d59.938757584924396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1524821151591" style="border:0" allowfullscreen></iframe>
+          <iframe class="contacts__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.2245392042514!2d30.32197825989839!3d59.938757584924396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1524821151591" style="border:0" allowfullscreen=""></iframe>
           <picture class="contacts__map-image">
             <source type="image/webp" media="(min-width: 1100px)" srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
@@ -183,21 +186,21 @@
               <li class="socials-list__item">
                 <a class="socials-list__link socials-list__link--vkontakte" href="#"><span class="visually-hidden">Вконтакте</span>
                   <svg class="social-list__icon" width="22" height="19" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+                    <use xlink:href="#inline-icon-vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials-list__item">
                 <a class="socials-list__link socials-list__link--instagram" href="#"><span class="visually-hidden">Инстаграм</span>
                   <svg class="social-list__icon" width="16" height="16" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                    <use xlink:href="#inline-icon-insta"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials-list__item">
                 <a class="socials-list__link socials-list__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span>
                   <svg class="social-list__icon" width="10" height="19" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                    <use xlink:href="#inline-icon-fb"></use>
                   </svg>
                 </a>
               </li>
@@ -205,13 +208,16 @@
           </div>
           <p class="copyrights">
             <a class="copyrights__link" href="https://up.htmlacademy.ru/adaptive/14">HTML Academy</a>
-            <svg class="copyrights__icon" width="27" height="34" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
-            </svg>
+            <a class="copyrights__link-icon" href="https://up.htmlacademy.ru/adaptive/14">
+              <svg class="copyrights__icon" width="27" height="34" aria-hidden="true">
+                <use xlink:href="#inline-icon-htmlacademy"></use>
+              </svg>
+            </a>
           </p>
         </div>
       </div>
     </footer>
   <script src="js/script.js"></script>
+  <script src="js/picturefill.js"></script>
   </body>
 </html>
