@@ -18,7 +18,6 @@ var del = require("del");
 var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 var pump = require("pump");
-var tinypng = require("gulp-tinypng");
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
