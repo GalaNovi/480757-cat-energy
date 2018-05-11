@@ -13,11 +13,17 @@
 
 .parameters td {
   .indent-reset;
+  width: 70%;
 
   &:last-child {
+    width: 30%;
     text-align: right;
   }
 }
+
+// .parameters__value {
+//   min-width: 50px;
+// }
 
 // ==========================TABLET========================
 
@@ -27,6 +33,11 @@
 
     td {
       padding: 8px 0 7px;
+      width: auto;
+
+      &:last-child {
+        width: auto;
+      }
     }
 
     tr {
@@ -35,6 +46,7 @@
 
     &--additional {
       width: auto;
+      max-width: 50%;
     }
 
     &--additional tr {
@@ -43,7 +55,7 @@
 
     &--additional td {
       &:last-child {
-        min-width: 95px;
+        width: 95px;
       }
     }
   }
@@ -76,8 +88,10 @@
       .indent-reset;
 
       &:last-child {
-        text-align: left;
+        padding-right: 15px;
         min-width: auto;
+
+        text-align: left;
         width: 80px;
       }
     }

@@ -1,4 +1,7 @@
 .socials-list__wrapper {
+  display: flex;
+  justify-content: center;
+
   margin-bottom: 22px;
   padding-right: 10px;
   border-bottom: @gray-line;
@@ -7,18 +10,19 @@
 .socials-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   .list-reset;
-  padding-bottom: 17px;
-  margin: auto;
-  width: 125px;
+  margin: 0;
+  // width: 125px;
 }
 
 .socials-list__item {
-  &:first-child {
-    margin-right: -3px;
-  }
+  margin: 0 19px;
+  margin-bottom: 17px;
+  // &:first-child {
+  //   margin-right: -3px;
+  // }
 }
 
 .socials-list__link {
@@ -37,29 +41,27 @@
 
 @media (min-width: @tablet-width) {
   .socials-list {
-    justify-content: flex-start;
-    .list-reset;
-    margin-right: 0;
-    width: auto;
+    // .list-reset;
+    // width: auto;
   }
 
   .socials-list__wrapper {
     .indent-reset;
-    margin-right: -20px;
+    margin-left: 19px;
 
     border: none;
   }
 
   .socials-list__item {
-    margin-right: 35px;
+    margin: 0 18px;
 
-    &:first-child {
-      margin-right: 35px;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
+    // &:first-child {
+    //   margin-right: 35px;
+    // }
+    //
+    // &:last-child {
+    //   margin-right: 0;
+    // }
   }
 
   // .socials-list__link--vkontakte svg {
