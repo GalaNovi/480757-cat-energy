@@ -88,7 +88,7 @@ gulp.task("clean", function() {
   return del("build");
 });
 gulp.task("htmlmin", function() {
-  return gulp.src("source/*.html")
+  return gulp.src("build/*.html")
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 });
