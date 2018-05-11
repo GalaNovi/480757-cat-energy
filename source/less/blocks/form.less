@@ -334,6 +334,7 @@
     margin-right: 17px;
 
     .font(20px, 20px);
+    color: red;
 
     &--for-radio,
     &--for-checkbox {
@@ -393,6 +394,10 @@
     &:-ms-input-placeholder {
       text-transform: uppercase;
       .font(20px, 20px, 400, #444444);
+    }
+
+    &::-webkit-input-placeholder {
+      line-height: normal;
     }
 
     &::-moz-placeholder {
