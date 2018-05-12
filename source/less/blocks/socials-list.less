@@ -1,28 +1,18 @@
-.socials-list__wrapper {
-  display: flex;
-  justify-content: center;
-
-  margin-bottom: 22px;
-  padding-right: 10px;
-  border-bottom: @gray-line;
-}
-
 .socials-list {
+  .list-reset;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+  margin-left: -10px;
+  margin-bottom: 22px;
 
-  .list-reset;
-  margin: 0;
-  // width: 125px;
+  border-bottom: @gray-line;
 }
 
 .socials-list__item {
   margin: 0 19px;
   margin-bottom: 17px;
-  // &:first-child {
-  //   margin-right: -3px;
-  // }
 }
 
 .socials-list__link {
@@ -41,12 +31,9 @@
 
 @media (min-width: @tablet-width) {
   .socials-list {
+    margin: 0;
+    margin-right: -20px;
     margin-top: 8px;
-  }
-
-  .socials-list__wrapper {
-    .indent-reset;
-    margin-left: 19px;
 
     border: none;
   }
