@@ -7,19 +7,22 @@
     display: flex;
     flex-direction: column;
   }
+
+  &--heading {
+    display: block;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .container {
-    min-width: 768px;
     padding: 0 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .container {
-    max-width: 1440px;
-    padding: 0 110px;
+    max-width: 1300px;
+    padding: 0 40px;
 
     &--index {
       color: #ffffff;

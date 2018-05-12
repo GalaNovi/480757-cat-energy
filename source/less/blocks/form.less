@@ -56,7 +56,7 @@
   margin: 0;
   padding: 11px 15px 10px;
   width: 100%;
-  min-width: 50px;
+  min-width: 150px;
 
   .font(16px, 18px, 400, @text-black);
   line-height: normal;
@@ -72,6 +72,10 @@
   &:-ms-input-placeholder {
     text-transform: uppercase;
     color: #444444;
+  }
+
+  &::-webkit-input-placeholder {
+    line-height: normal;
   }
 
   &::-moz-placeholder {
@@ -122,6 +126,7 @@
   position: relative;
 
   margin-right: 12px;
+  max-width: 42%;
 
   cursor: pointer;
 
@@ -129,6 +134,7 @@
   &--for-checkbox {
     margin-left: 45px;
     margin-bottom: 9px;
+    max-width: 84%;
   }
 
   &--for-checkbox {
@@ -157,11 +163,6 @@
 
     border: 1px solid rgba(205, 205, 205, 1);
     border-radius: 50%;
-  }
-
-  &--for-radio:hover::before,
-  &--for-checkbox:hover::before {
-    border-color: rgba(186, 186, 186, 1);
   }
 
   &--for-radio::after {
@@ -218,6 +219,16 @@
 .form__checkbox:focus + .form__label::before {
   border-color: rgba(186, 186, 186, 1);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.form__radio:disabled + .form__label,
+.form__checkbox:disabled + .form__label {
+  opacity: 0.3;
+}
+
+.form__radio:not(:disabled):hover + .form__label::before,
+.form__checkbox:not(:disabled):hover + .form__label::before {
+  border-color: rgba(186, 186, 186, 1);
 }
 
 .form__section-title {
@@ -340,6 +351,7 @@
     }
 
     &--for-checkbox {
+      align-self: flex-start;
       margin-left: 58px;
       margin-bottom: 13px;
     }
@@ -390,6 +402,10 @@
     &:-ms-input-placeholder {
       text-transform: uppercase;
       .font(20px, 20px, 400, #444444);
+    }
+
+    &::-webkit-input-placeholder {
+      line-height: normal;
     }
 
     &::-moz-placeholder {
@@ -476,7 +492,7 @@
     }
 
     &--additional {
-      margin-bottom: 59px;
+      margin-bottom: 39px;
     }
   }
 
@@ -493,14 +509,16 @@
 
   .form__radio-wrapper {
     padding-bottom: 2px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 
   .form__item {
     &--checkbox {
+      flex-grow: 0;
       min-width: auto;
       width: 25%;
       margin: 0;
+      margin-bottom: 20px;
       padding: 0 40px;
       padding-top: 5px;
     }
@@ -558,7 +576,6 @@
   }
 
   .form__checkbox-wrapper {
-    justify-content: flex-start;
     align-items: flex-start;
     margin: 0 -40px;
     padding: 0;

@@ -2,9 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="keywords" content="программа питания для кошек, catenergy, cat energy, магазин cat energy, кошачий корм, корм для кошек, магазин кошачего корма, питание для котов">
+    <meta name="description" content="Оформите заявку на подбор программы питания в интернет-магазине Cat Energy полезного питания для кошек.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="js/mobile-menu.js" as="script">
   </head>
   <body>
     <div style="display: none">
@@ -35,7 +39,7 @@
         </nav>
       </div>
     </header>
-    <main class="page-main page-main--inner-page">
+    <main class="page-main">
       <div class="container">
         <h1 class="page-main__heading page-main__heading--form">Подбор программы</h1>
       </div>
@@ -80,9 +84,9 @@
           </div>
           <fieldset class="form__fieldset form__fieldset--contact-info">
             <h3 class="form__section-title">
-              <div class="container">
+              <span class="container container--heading">
                 <span class="form__heading-text">Контактные данные<br class="break"> (владельца кота)</span>
-              </div>
+              </span>
             </h3>
             <div class="container">
               <div class="form__row-wrapper form__row-wrapper--contact-info">
@@ -105,9 +109,9 @@
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--comment">
             <h3 class="form__section-title">
-              <div class="container">
+              <span class="container container--heading">
                 <span class="form__heading-text">Комментарий</span>
-              </div>
+              </span>
             </h3>
             <div class="container">
               <p class="form__item form__item--comment">
@@ -118,15 +122,15 @@
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--additional">
             <h3 class="form__section-title form__section-title--additional">
-              <div class="container">
+              <span class="container container--heading">
                 <span class="form__heading-text">Дополнительно</span>
-              </div>
+              </span>
             </h3>
             <div class="container">
               <div class="form__checkbox-wrapper">
                 <p class="form__item form__item--checkbox">
                   <input class="form__checkbox visually-hidden" id="sweetener" type="checkbox" name="sweetener" value="yes" checked="">
-                    <label class="form__label form__label--for-checkbox" for="sweetener"><span class="form__checkbox-text">Сахарозаменитель</span></label>
+                  <label class="form__label form__label--for-checkbox" for="sweetener"><span class="form__checkbox-text">Сахарозаменитель</span></label>
                 </p>
                 <p class="form__item form__item--checkbox">
                   <input class="form__checkbox visually-hidden" id="water" type="checkbox" name="water" value="yes">
@@ -207,8 +211,8 @@
             </ul>
           </div>
           <p class="copyrights">
-            <a class="copyrights__link" href="https://up.htmlacademy.ru/adaptive/14">HTML Academy</a>
-            <a class="copyrights__link-icon" href="https://up.htmlacademy.ru/adaptive/14">
+            <a class="copyrights__link" href="https://up.htmlacademy.ru/adaptive/14">
+              <span class="copyrights__text">HTML Academy</span>
               <svg class="copyrights__icon" width="27" height="34" aria-hidden="true">
                 <use xlink:href="#inline-icon-htmlacademy"></use>
               </svg>
@@ -217,7 +221,7 @@
         </div>
       </div>
     </footer>
-  <script src="js/script.js"></script>
+  <script src="js/mobile-menu.js"></script>
   <script src="js/picturefill.js"></script>
   </body>
 </html>

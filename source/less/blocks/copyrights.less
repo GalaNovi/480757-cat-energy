@@ -8,8 +8,11 @@
 }
 
 .copyrights__link {
+  display: flex;
+  justify-content: space-between;
   margin-left: -1px;
   margin-bottom: 15px;
+  width: 100%;
 
   .arial(16px, 16px, 400, #444444);
   text-transform: none;
@@ -19,22 +22,16 @@
   }
 }
 
-.copyrights__link:hover + .copyrights__link-icon .copyrights__icon,
-.copyrights__link-icon:hover .copyrights__icon {
-  fill: @brand-color;
-}
-
-.copyrights__link:active + .copyrights__link-icon .copyrights__icon,
-.copyrights__link-icon:active .copyrights__icon {
-  opacity: 0.3;
-}
-
-.copyrights__link-icon {
-  margin-bottom: 3px;
+.copyrights__text {
+  margin-top: 8px;
 }
 
 .copyrights__icon {
   fill: #666666;
+}
+
+.copyrights__link:hover .copyrights__icon {
+  fill: @brand-color;
 }
 
 // ===========================TABLET=======================

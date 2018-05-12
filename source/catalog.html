@@ -2,9 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="keywords" content="каталог товаров catenergy, cat energy, кошачий корм, корм для кошек, магазин кошачего корма, питание для котов">
+    <meta name="description" content="Каталог нтернет-магазина Cat Energy полезного питания для кошек. Наш корм поможет вашему питомцу похудеть или набрать вес!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="js/mobile-menu.js" as="script">
   </head>
   <body>
     <div style="display: none">
@@ -37,7 +41,7 @@
         </nav>
       </div>
     </header>
-    <main class="page-main page-main--inner-page">
+    <main class="page-main">
       <div class="container">
         <h1 class="page-main__heading">Каталог продукции</h1>
       </div>
@@ -300,9 +304,9 @@
       </section>
       <section class="catalog__additional">
         <h2 class="catalog__additional-heading">
-          <div class="container">
+          <span class="container container--heading">
             <span class="catalog__heading-text">Дополнительные товары</span>
-          </div>
+          </span>
         </h2>
         <div class="container">
           <div class="page-main__columns">
@@ -413,8 +417,8 @@
             </ul>
           </div>
           <p class="copyrights">
-            <a class="copyrights__link" href="https://up.htmlacademy.ru/adaptive/14">HTML Academy</a>
-            <a class="copyrights__link-icon" href="https://up.htmlacademy.ru/adaptive/14">
+            <a class="copyrights__link" href="https://up.htmlacademy.ru/adaptive/14">
+              <span class="copyrights__text">HTML Academy</span>
               <svg class="copyrights__icon" width="27" height="34" aria-hidden="true">
                 <use xlink:href="#inline-icon-htmlacademy"></use>
               </svg>
@@ -423,7 +427,7 @@
         </div>
       </div>
     </footer>
-  <script src="js/script.js"></script>
+  <script src="js/mobile-menu.js"></script>
   <script src="js/picturefill.js"></script>
   </body>
 </html>

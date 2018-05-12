@@ -12,7 +12,7 @@
 
   min-width: 124px;
   margin-bottom: 30px;
-  padding: 14px 0 18px;
+  padding: 14px 15px 18px;
 
   display: inline-block;
 
@@ -30,17 +30,18 @@
 
 .result-list__description {
   position: absolute;
-  bottom: -16px;
-  left: 17px;
+  top: 46px;
+  left: 50%;
 
-  padding: 0 5px;
-
-  width: 87px;
+  padding: 0 15px;
+  max-width: 70%;
 
   text-transform: none;
   .arial(12px, 12px, 400, rgba(68, 68, 68, 1));
 
   background-color: @gray-background;
+
+  transform: translateX(-50%);
 }
 
 // ===========================TABLET==============================
@@ -85,12 +86,14 @@
     display: inline-block;
     padding: 0 9px;
     width: auto;
-    max-width: 147px;
+    max-width: 91%;
 
     .font(14px, 14px);
     vertical-align: top;
 
     background-color: #ffffff;
+
+    transform: none;
   }
 }
 

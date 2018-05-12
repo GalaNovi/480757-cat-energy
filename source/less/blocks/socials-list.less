@@ -1,24 +1,18 @@
-.socials-list__wrapper {
+.socials-list {
+  .list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  margin-left: -10px;
   margin-bottom: 22px;
-  padding-right: 10px;
+
   border-bottom: @gray-line;
 }
 
-.socials-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  .list-reset;
-  padding-bottom: 17px;
-  margin: auto;
-  width: 125px;
-}
-
 .socials-list__item {
-  &:first-child {
-    margin-right: -3px;
-  }
+  margin: 0 19px;
+  margin-bottom: 17px;
 }
 
 .socials-list__link {
@@ -37,41 +31,18 @@
 
 @media (min-width: @tablet-width) {
   .socials-list {
-    justify-content: flex-start;
-    .list-reset;
-    margin-right: 0;
-    width: auto;
-  }
-
-  .socials-list__wrapper {
-    .indent-reset;
+    margin: 0;
     margin-right: -20px;
+    margin-top: 8px;
 
     border: none;
   }
 
   .socials-list__item {
-    margin-right: 35px;
-
-    &:first-child {
-      margin-right: 35px;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
+    margin: 0 18px;
   }
 
-  // .socials-list__link--vkontakte svg {
-  //   width: 30px;
-  //   height: 16px;
-  // }
-
   .socials-list__link svg {
-    // width: 30px;
-    // height: 16px;
     transform: scale(1.4);
   }
 }
-
-// =========================DESKTOP==============================
